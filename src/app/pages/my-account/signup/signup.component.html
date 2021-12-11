@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-decoration-none text-dark" href="#" routerLink="/">Inicio</a></li>
+                <li class="breadcrumb-item"><a class="text-decoration-none text-dark" href="#" routerLink="/mi-cuenta">Mi cuenta</a></li>
+                <li class="breadcrumb-item active text-dark fw-bold" aria-current="page">Crear cuenta</li>
+              </ol>
+            </nav>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title text-center"><u>REGÍ</u>STRATE EN FUTURA</h3>
+                    <p class="card-text text-center" id="bold">Rellena este formulario para crear una cuenta en FUTURA.</p>
+                    <p class="card-text">Los campos marcados con <span class="text-danger fw-bold">*</span> son obligatorios.</p>
+                    <form (ngSubmit)="signUp()" #singupForm="ngForm">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-12 mb-3">
+                                    <hr class="text-primary"/>
+                                    <h5 class="text-center">DATOS PERSONALES</h5>
+                                    <hr class="text-primary"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5 offset-sm-1 mb-4">
+                                    <label for="name" class="form-label">NOMBRE <span class="text-danger fw-bold">*</span></label>
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5 offset-sm-1 mb-4">
+                                    <label for="first_surname" class="form-label">PRIMER APELLIDO <span class="text-danger fw-bold">*</span></label>
+                                    <input type="text" class="form-control" id="first_surname" placeholder="Primer apellido" name="fisrt_name" required>
+                                </div>
+                                <div class="col-sm-5 mb-5">
+                                    <label for="second_surname" class="form-label">SEGUNDO APELLIDO</label>
+                                    <input type="text" class="form-control" id="second_surname" placeholder="Segundo apellido" name="second_surname">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-12 mb-3">
+                                    <hr class="text-primary"/>
+                                    <h5 class="text-center">DATOS DE ACCESO</h5>
+                                    <hr class="text-primary"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5 offset-sm-1 mb-4">
+                                    <label for="email" class="form-label">CORREO ELECTRÓNICO <span class="text-danger fw-bold">*</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="Dirección de email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5 offset-sm-1 mb-4">
+                                    <label for="password" class="form-label">CONTRASEÑA <span class="text-danger fw-bold">*</span></label>
+                                    <div class="input-group">
+                                        <input [type]="fieldPasswordType ? 'text' : 'password'" class="form-control" id="password" placeholder="Contraseña" name="password" required>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                              <i [ngClass]="{
+                                                'bi bi-eye-fill': !fieldPasswordType,
+                                                'bi bi-eye-slash-fill': fieldPasswordType
+                                              }"
+                                              (click)="toggleFieldPasswordType()" id="show_eye"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5 mb-5">
+                                    <label for="password_confirmation" class="form-label">CONFIRMA TU CONTRASEÑA <span class="text-danger fw-bold">*</span></label>
+                                    <div class="input-group">
+                                        <input [type]="fieldConfirmPasswordType ? 'text' : 'password'" class="form-control" id="password_confirmation" placeholder="Segundo apellido" name="password_confirmation" required>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                              <i [ngClass]="{
+                                                'bi bi-eye-fill': !fieldConfirmPasswordType,
+                                                'bi bi-eye-slash-fill': fieldConfirmPasswordType
+                                              }"
+                                              (click)="toggleFieldConfirmPasswordType()" id="show_eye"></i>
+                                            </span>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4 form-check">
+                            <div class="col-sm-10 offset-sm-1">
+                                <input type="checkbox" class="form-check-input" id="conditions">
+                                <label class="form-check-label" for="conditions">He leído y acepto las Condiciones de uso y la Política de privacidad de FUTURA. <span class="text-danger fw-bold">*</span></label>
+                            </div>          
+                        </div>
+                        <div class="d-grid gap-2 col-sm-4 mx-auto">
+                            <button type="submit" class="btn btn-primary shadow" routerLink="/mi-cuenta">CREAR CUENTA</button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

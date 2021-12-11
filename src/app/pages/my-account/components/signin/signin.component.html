@@ -1,0 +1,35 @@
+<div class="card shadow">
+    <div class="card-body">
+      <h4 class="card-title"><u>INICI</u>O DE SESIÓN</h4>
+      <p class="card-text">Inicia sesión para disfrutar de los beneficios de la cuenta cliente de FUTURA.</p>
+      <div class="col-sm-10 offset-sm-1">
+        <form (submit)="logIn()" #loginForm="ngForm">
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="Correo electrónico" name="email" required [(ngModel)]="user.email">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-group">
+              <input [type]="fieldTextType ? 'text' : 'password'" class="form-control" id="password" placeholder="Contraseña" name="password" required [(ngModel)]="user.password">
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i [ngClass]="{
+                    'bi bi-eye-fill': !fieldTextType,
+                    'bi bi-eye-slash-fill': fieldTextType
+                  }"
+                  (click)="toggleFieldTextType()" id="show_eye"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 text-end">
+            <a routerLink="#">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="d-grid gap-2 col-sm-7 mx-auto">
+            <button type="submit" class="btn btn-primary shadow">INICIAR SESIÓN</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
