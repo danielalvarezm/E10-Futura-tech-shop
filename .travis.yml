@@ -1,18 +1,21 @@
+dist: trusty
+sudo: false
+
 language: node_js
 node_js:
   - "17"
-dist: trusty
-sudo: false
+
+addons:
+  chrome: stable
 
 cache:
   directories:
     - node_modules
 
-addons:
-  chrome: stable
+install:
+  - npm install
 
 script:
   - npm run lint
   - npm run test:headless
   - npm run build
-  - xvfb-run npm run e2e
