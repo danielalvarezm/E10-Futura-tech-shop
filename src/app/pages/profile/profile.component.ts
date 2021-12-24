@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../../_services';
@@ -9,7 +9,7 @@ import { User } from '../../_models';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
 
   currentUser: User;
 
@@ -19,9 +19,6 @@ export class ProfileComponent implements OnInit {
   ) {
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
    }
-
-  ngOnInit(): void {
-  }
 
   logout() {
     this.authenticationService.logout();
