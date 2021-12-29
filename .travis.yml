@@ -10,12 +10,12 @@ addons:
 
 cache:
   directories:
-    - node_modules
+    - ./node_modules
 
 install:
   - npm install
 
 script:
   - npm run lint
-  - npm run test:headless
+  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
   - npm run build
