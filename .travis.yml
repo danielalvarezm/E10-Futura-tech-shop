@@ -6,10 +6,11 @@ node_js:
   - "16"
 
 addons:
-  chrome: stable
-
-before_install:
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 
 cache:
   directories:
@@ -20,5 +21,5 @@ install:
 
 script:
   - npm run lint
-  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
   - npm run build
