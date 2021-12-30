@@ -1,3 +1,5 @@
+dist: trusty
+
 language: node_js
 node_js:
   - "16"
@@ -16,3 +18,8 @@ script:
   - npm run lint
   - npm run test-headless
   - npm run build
+
+notifications:
+  slack:
+    rooms:
+      - sytwull:JBW5ewR8fatDfQsR493S8i6D#e10
