@@ -1,15 +1,6 @@
-dist: trusty
-sudo: false
-
 language: node_js
 node_js:
   - "16"
-
-env:
-  global:
-    - DBUS_SESSION_BUS_ADDRESS=/dev/null
-    - DISPLAY=:99.0
-    - CHROME_BIN=chromium-browser
 
 addons:
   chrome: stable
