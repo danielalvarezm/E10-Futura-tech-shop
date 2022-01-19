@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './create-account.component.html',
   styleUrls: ['./create-account.component.css']
 })
+
 export class CreateAccountComponent {
 
   constructor() { }
