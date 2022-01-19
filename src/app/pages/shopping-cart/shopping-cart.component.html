@@ -1,0 +1,139 @@
+<div class="container">
+    <h4 class="card-title mt-5 mb-3"><u>MI</u><b> CARRITO</b></h4>
+    <div class="row">
+        <div class="col-sm-7">
+          <h5>ARTICULOS EN EL CARRITO</h5>
+          <a routerLink="./envio">Tramitar Compra</a>
+          <p>Pulsa sobre "<b>Tramitar Compra</b>" para gestionar la compra de tus articulos.</p>
+        </div>
+        <div class="mb-2 col-sm-5">
+          <button type="button" class="btn btn-primary btn-lg btn-block shadow-sm" routerLink="./envio">Tramitar Compra<i class="bi bi-chevron-compact-right"></i></button>
+        </div>
+    </div>
+    <!-- not showing up in small screens -->
+    <div class="d-none d-sm-block">
+        <div class="row mt-3">
+            <div class="col-sm-6 bg-info border border-white text-center">
+              <p>ARTICULO</p>
+            </div>
+            <div class="col-sm-2 bg-info border border-white text-center">
+              <p>PRECIO</p>
+            </div>
+            <div class="col-sm-2 bg-info border border-white text-center">
+              <p>CANTIDAD</p>
+            </div>
+            <div class="col-sm-1 bg-info border border-white text-center">
+              <p>TOTAL</p>
+            </div>
+            <div class="col-sm-1 bg-info border border-white text-center">
+              <p>ELIMINAR</p>
+            </div>
+          </div>
+    </div>
+    <!-- end block of not showing in small devices -->
+
+    <div class="border border-info mt-2 border-2">
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <p>Samsung Galaxy A22 5G,Blanco,64G,4GB RAM, 6.6"FHD+,MT6739,Android 11</p>
+          </div>
+    
+          <div class="col-sm-2 text-center">
+            <p>183.20€</p>
+          </div>
+    
+          <div class="col-sm-2">
+            <div class="col-xs-2">
+              <input class="form-control" id="ex1" type="number" value="2">
+            </div>
+          </div>
+    
+          <div class="col-sm-1 text-center">
+            <p><b>183.20€</b></p>
+          </div>
+    
+          <div class="col-sm-1 text-center">
+            <i class="bi bi-trash"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-info mt-2 border-2">
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <p>Samsung Galaxy S20 FE 5G,128G,6GB,6.5"</p>
+          </div>
+    
+          <div class="col-sm-2 text-center">
+            <p>510.50€</p>
+          </div>
+    
+          <div class="col-sm-2">
+            <div class="col-xs-2">
+              <input class="form-control" id="ex2" type="number">
+            </div>
+          </div>
+    
+          <div class="col-sm-1 text-center">
+            <p><b>510.50€</b></p>
+          </div>
+    
+          <div class="col-sm-1 text-center">
+            <i class="bi bi-trash"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-2 border border-info border-2 d-none d-md-block">
+        <div class="mt-2 row">
+            <div class="col-sm-3 offset-sm-7">
+                <p>Subtotal:</p>
+                <p>Gastos de envio estimados:</p>
+                <p><b>TOTAL:</b></p>
+            </div>
+            <div class="col-sm-1">
+                <p>693,70€</p>
+                <p>Gratis</p>
+                <p><b>693,70€</b></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 offset-sm-2">
+              <button type="button" class="btn btn-outline-primary" routerLink="#">Continuar Comprando</button>
+            </div>
+            <div class="col-sm-4 offset-sm-3">
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-primary btn-lg btn-block shadow-sm mb-4" routerLink="./envio">Tramitar Compra<i class="bi bi-chevron-compact-right"></i></button>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- only showing up in small screens -->
+      <div class="d-block d-sm-none">
+          <div class="mt-2 border border-info border-2">
+            <div class="mt-2 d-flex justify-content-around">
+                <div class="">
+                    <p>Subtotal:</p>
+                    <p>Gastos de envio estimados:</p>
+                    <p><b>TOTAL:</b></p>
+                </div>
+                <div class="">
+                    <p>693,70€</p>
+                    <p>Gratis</p>
+                    <p><b>693,70€</b></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2  d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary btn-lg btn-block shadow-sm mb-4" routerLink="./envio">Tramitar Compra<i class="bi bi-chevron-compact-right"></i></button>
+                </div>
+                <div class="mb-2 col-xs-2  d-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-primary" routerLink="#">Continuar Comprando</button>
+                </div>
+            </div>
+          </div>
+      </div>
+      <!-- end block small devices -->
+      
+      
+</div>

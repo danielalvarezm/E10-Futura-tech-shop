@@ -1,0 +1,85 @@
+<div class="container">
+    <h4 class="card-title mt-5 mb-3"><u>TR</u>AMITAR<b> COMPRA</b></h4>
+    <!-- only showing big devices -->
+    <div class="d-none d-sm-block">
+        <div class="row">
+            <nav class="d-flex justify-content-evenly mt-4">
+                <a style="text-decoration:none" href="" routerLink="./envio">1. ENVÍO</a>
+                <a style="text-decoration:none"><b style="color: rgb(14, 118, 168);">2. DATOS PERSONALES</b></a>
+                <a style="text-decoration:none" href="" routerLink="./pago">3. PAGO</a>
+                <a style="text-decoration:none" href="">4. CONFIRMACIÓN</a>
+            </nav>
+                <hr style="border: 1px solid black;">
+        </div>
+    </div>
+    <!-- end showing big devices -->
+
+    <!-- only showing in small devices -->
+    <div class="d-block d-sm-none">
+    <nav class="navbar navbar-expand-xs navbar-dark">
+        <div class="container">
+            <div class="navbar-collapse" id="navbarSupportedContent"> 
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active me-5 subheader" href="#" style="color: black;" routerLink="./envio">1. ENVÍO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-5 subheader" style="color: black;"><b style="color: rgb(14, 118, 168);">2. DATOS PERSONALES</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-5 subheader" href="#" style="color: black;" routerLink="./pago">3. PAGO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-5 subheader" href="#" style="color: black;">4. CONFIRMACIÓN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <!-- end block showing small devices -->
+    
+    <div class="row">
+        <div class="col-sm-7">
+            <h5 class="mt-5" style="font-weight: 400;">INFORMACIÓN PERSONAL DEL CLIENTE</h5>
+            <p>Introduce el número de tu documento de identificación.</p>
+            <div class="input-group mb-3  w-75">
+                <span class="input-group-text" id="basic-addon1">DNI</span>
+                <input type="text" class="form-control" placeholder="Número de tu documento de identificación" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="border border-2">
+                <div class="d-flex justify-content-md-between mt-2">
+                    <div class="mx-3">
+                        <p><b>NOMBRE Y APELLIDOS</b></p>
+                        <p>María Hernández Hernández</p>
+                    </div>
+                    <div>
+                        <button type="button" class="mx-3 btn btn-outline-primary mt-2">MODIFICAR</button>
+                    </div>
+                </div>
+                <div class="mx-3">
+                    <p><b>DIRECCIÓN</b></p>
+                    <p>Calle Carrera escultor estevez, 1 
+                        Código postal 38300 
+                        La Orotava (SANTA CRUZ DE TENERIFE)
+                        ESPAÑA</p>
+                </div>
+                <div class="mx-3">
+                    <p><b>TELÉFONO</b></p>
+                    <p>64646464</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <resumen-compra></resumen-compra>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-7 d-grid gap-2">
+            <button type="button" class="mb-2 btn btn-outline-primary" routerLink="./envio">Volver</button>
+        </div>
+        <div class="col-sm-5 d-grid gap-2">
+            <button type="button" class="mb-2 btn btn-primary btn-lg btn-block shadow-sm" routerLink="./pago">Continuar<i class="bi bi-chevron-compact-right"></i></button>
+        </div>
+    </div>
+</div>
