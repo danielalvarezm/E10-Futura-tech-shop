@@ -1,4 +1,92 @@
 <div class="container">
-    <h1> Perfil </h1>
-    <div class="btn btn-primary shadow" (click)="logout()">CERRAR SESIÓN</div>
+    <div class="row">
+        <div class="col-sm-3 mt-5 mb-3">
+            <h4 class="card-title"><u>MI</u><b> CUENTA</b></h4>
+        </div>
+        <div class="col-sm-3 offset-sm-6 mt-5 mb-3">
+            <div class="btn btn-primary shadow" (click)="logout()">CERRAR SESIÓN</div>
+        </div>
+    </div>
+
+    <div class="border border-primary rounded-3 shadow-sm border-2">
+        <div class="btn d-flex" (click)="navDatosPersonales();">
+            <i class="bi bi-person-circle mx-2" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+            <div class="align-self-center">
+                <h4 style="color: rgb(14, 118, 168);">MI PERFIL</h4>
+            </div>
+        </div>
+
+        <h4 class="mx-5" style="color: rgb(14, 118, 168);">DATOS PERSONALES</h4>
+        <div class="row mx-5">
+            <div class="col-sm-2"  style="padding-left: 0px;">
+                <!-- cambiar nombre por el de la bbdd -->
+                <p><b>NOMBRE:</b> María</p>
+            </div>
+            <div class="col-sm-3" style="padding-left: 0px;">
+                <!-- cambiar apellidos por el de la bbdd -->
+                <p><b>APELLIDOS:</b> Hernández Hernández</p>
+            </div>
+            <div class="col-sm-3" style="padding-left: 0px;">
+                <!-- cambiar telefono por el de la bbdd -->
+                <p><b>TELÉFONO:</b> 646 82 42 20</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <h4 class="mx-5" style="color: rgb(14, 118, 168);">CUENTAS DE ACCESO</h4>
+                <p class="mx-5">maria97@gmail.com</p>
+            </div>
+            <div class="col-sm-5">
+                <h4 class="mx-5" style="color: rgb(14, 118, 168);">DIRECCIONES</h4>
+                <p class="mx-5">Calle Carrera escultor estevez, 1 Código postal 38300 La Orotava (SANTA CRUZ DE TENERIFE)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-around">
+        <div class="btn mt-5 col-sm-5 border border-primary rounded-3 shadow-sm border-2" (click)="navPedidos()">
+            <div class="d-flex justify-content-around">
+                <i class="bi bi-bag-check-fill" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+                <h4 class="mt-4" style="color: rgb(14, 118, 168);">MIS PEDIDOS</h4>
+                <i class="bi bi-chevron-right" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+            </div>
+        </div>
+        <div class="btn mt-5 col-sm-5 border border-primary rounded-3 shadow-sm border-2">
+            <div class="d-flex justify-content-around">
+                <i class="bi bi-heart-fill" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+                <h4 class="mt-4" style="color: rgb(14, 118, 168);">MIS FAVORITOS</h4>
+                <i class="bi bi-chevron-right" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- only showing big devices -->
+    <div class="btn mt-5 d-none d-sm-block">
+        <div class="d-flex border border-primary rounded-3 shadow-sm border-2">
+            <div class="p-2">
+                <i class="bi bi-wallet-fill" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+            </div>
+            <div class="p-2">
+                <h4 class="mt-4" style="color: rgb(14, 118, 168);">MONEDERO</h4>
+            </div>
+            <div class="ml-auto p-2 offset-sm-9">
+                <i class="bi bi-chevron-right" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+            </div>
+        </div>
+    </div>
+    <!-- end of block only showing big devices -->
+
+    <!-- only showing in small devices -->
+    <div class="btn d-block d-sm-none">
+        <div class="mt-5 col-sm-5 border border-primary rounded-3 shadow-sm border-2">
+            <div class="d-flex justify-content-around">
+                <i class="bi bi-wallet-fill" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+                <h4 class="mt-4" style="color: rgb(14, 118, 168);">MONEDERO</h4>
+                <i class="bi bi-chevron-right" style="font-size: 50px; color: rgb(14, 118, 168);"></i>
+            </div>
+        </div>
+    </div>
+    <!-- end block showing small devices -->
+    
 </div>

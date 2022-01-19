@@ -20,6 +20,22 @@ export class ProfileComponent {
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
    }
 
+  navPedidos(){
+    this.router.navigate(['/#']);
+  }
+
+  navFavoritos(){
+    this.router.navigate(['/#']);
+  }
+
+  navMonedero(){
+    this.router.navigate(['/#']);
+  }
+
+  navDatosPersonales(){
+    this.router.navigate(['/#']);
+  }
+
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/mi-cuenta']);
