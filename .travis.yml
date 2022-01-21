@@ -7,6 +7,14 @@ node_js:
 addons:
   chrome: stable
 
+  sonarcloud:
+    organization: "sytw-2122"
+    token:
+      secure: "K32RLkq7l5HConOE7E8xIElRxcYpZyqLEKwZxdpp9gs3ezsvd1RXwk8ypsBc1jX7Wd0bWWTZwTgOVPpFqon7DagN4foe6HKWPBeZxs4fg37c4b4DrC4P4O2oDO1aabjKtblrWqP4W7W0hhIbTmUEjTgqPGIPm6uAgubBOS+koGzPWDvibjZ/K43G13BOtC9U3tCfDEK7HVqjuHx5iYwUxrFDaQrDY9jM8avXLxx9AuM3Fg4fI2APZzU9mHaTfzCo4mMosA+JJod4C3Ygj4Nvr6vOWq6YzubWW1cRAy8SqrDWHh6yMBAFYNHBQgT4AN6kcQXnodbXYpkToaBZ6a8pImvP8IJWXQsyL1hQp/O+fcBPMrcCtoTIquUHR2j+ZCc3YXhm98kii7zdGKMrplIYabObhtekJp2CRqJCvDd978jd+/FZJHSQfSd4ChFglBRT4FP+n/4ea0VU5lO8lucmPGlfzlzOlse3PRx38702pHl3fBWGhNofo4tmt/6RPB+8xmA+9Jf3z/I1B0ycD+P/I5OvHfj751D0du1RKKIjhIgirv0E8gnRMRO6T6BIg1MGtLhFZ4M32uAC+fkQx3H9+VmZexe4O8d4de6QS9wy7NKoLM4UTRtmRdmvPK6d9XZUjG3zkoVDLKNC2+9Zj9gUp1kDDBsh9EvKvGwYNOlZDBU="
+
+script:
+  - sonar-scanner
+
 cache:
   directories:
     - ./node_modules
