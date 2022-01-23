@@ -24,27 +24,31 @@ module.exports = function (config) {
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
-    coverageReporter: {
-      type : 'text',
-      dir : 'coverage/',
-      file : 'coverage.txt'
-    },
     preprocessor: {
-      'src/**/*.js': ['coverage']
+      'src/**/*.ts': ['coverage']
     },
     reporters: ['progress', 'coverage', 'kjhtml'],
+    coverageReporter: {
+      dir: require('path').join(__dirname, './coverage/futura'),
+      subdir: '.',
+      reporters: [
+        { type: 'html' },
+        { type: 'text-summary' },
+        {type: 'lcov'}
+      ]
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome', 'ChromeHeadlessCI'],
     customLaunchers: {
-    ChromeHeadlessCI: {
-      base: 'ChromeHeadless',
-      flags: ['--no-sandbox']
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
       }
     },
-    singleRun: true,
+    singleRun: false,
     restartOnFileChange: true
   });
 };
