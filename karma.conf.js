@@ -25,13 +25,12 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/futura'),
-      subdir: '.',
-      reporters: [
-        { type: 'html' },
-        { type: 'text-summary' },
-        {type: 'lcov'}
-      ]
+      type : 'text',
+      dir : 'coverage/',
+      file : 'coverage.txt'
+    },
+    preprocessor: {
+      'src/**/*.js': ['coverage']
     },
     reporters: ['progress', 'coverage', 'kjhtml'],
     port: 9876,
