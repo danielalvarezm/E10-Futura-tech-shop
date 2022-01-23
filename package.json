@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "karma start karma.conf.js",
+    "codecov": "codecov",
     "lint": "ng lint",
     "test-headless": "ng test -- --no-watch --no-progress --browsers=ChromeHeadlessCI"
   },

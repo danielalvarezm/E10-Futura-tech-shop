@@ -28,19 +28,16 @@ jobs:
       
     - run: npm install
     - run: npm run test-headless
-    - run: npm test -- --coverage
     - run: npm run build
+    - run: npm test
+    - run: npm run codecov
     
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-     
-    - name: Upload coverage to Codecov
+
+    - name: Upload coverage to Codecov   
       uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./coverage.xml
-        flags: unittestsonal
-        name: codecov-umbrella
-        verbose: true
