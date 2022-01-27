@@ -1,2 +1,5 @@
 fixes:
-  - "/home/codecov/::"
+  - "/E10/::"
+
+codecov:
+  disable_default_path_fixes: true
