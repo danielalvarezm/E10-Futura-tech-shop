@@ -7,7 +7,7 @@
                 <a style="text-decoration:none" href="" routerLink="./envio">1. ENVÍO</a>
                 <a style="text-decoration:none"><b style="color: rgb(14, 118, 168);">2. DATOS PERSONALES</b></a>
                 <a style="text-decoration:none" href="" routerLink="./pago">3. PAGO</a>
-                <a style="text-decoration:none" href="">4. CONFIRMACIÓN</a>
+                <a style="text-decoration:none" href="" routerLink="./confirmacion">4. CONFIRMACIÓN</a>
             </nav>
                 <hr style="border: 1px solid black;">
         </div>
@@ -45,9 +45,9 @@
             <p>Introduce el número de tu documento de identificación.</p>
             <div class="input-group mb-3  w-75">
                 <span class="input-group-text" id="basic-addon1">DNI</span>
-                <input type="text" class="form-control" placeholder="Número de tu documento de identificación" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="name" placeholder="Número de tu documento de identificación" required>
             </div>
-            <div class="border border-2">
+            <div class="border border-primary border-1 border-rounded rounded-3">
                 <div class="d-flex justify-content-md-between mt-2">
                     <div class="mx-3">
                         <p><b>NOMBRE Y APELLIDOS</b></p>
