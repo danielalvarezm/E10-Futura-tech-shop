@@ -6,7 +6,7 @@ import { MainPageComponent } from './main-page.component';
 import { MainPageRoutingModule } from './main-page-routing.module';
 
 import { SliderComponent } from './components/slider/slider.component';
-import { CategoriasRelevantesComponent } from './components/categorias-relevantes/categorias-relevantes.component';
+import { RelevantCategoriesComponent } from './components/relevant-categories/relevant-categories.component';
 import { ProductsInterestComponent } from './components/products-interest/products-interest.component';
 import { NewsComponent } from './components/news/news.component';
 import { ProductoComponent } from './moviles/producto/producto.component';
@@ -16,7 +16,7 @@ import { MovilesComponent } from './moviles/moviles.component';
   declarations: [
     MainPageComponent,
     SliderComponent,
-    CategoriasRelevantesComponent,
+    RelevantCategoriesComponent,
     ProductsInterestComponent,
     NewsComponent,
     MovilesComponent,

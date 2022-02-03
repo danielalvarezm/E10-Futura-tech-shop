@@ -1,11 +1,22 @@
 <div class="container">
-    <!-- INSERTAR BREADCRUMB  -->
-    <div class="mt-5 row">
+    <div class="mt-3 row">
+        <div class="col-sm-12">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-decoration-none text-dark" href="#" routerLink="/">Inicio</a></li>
+                    <li class="breadcrumb-item active text-dark fw-bold" aria-current="page">Móviles</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="mt-2 row">
         <div class="col-sm-6">
             <h4 class="card-title mt-3 mb-3"><u>TOD</u>OS LOS <b>SMARTPHONES</b></h4>
-        </div>           
+        </div>
         <div class="col-sm-2 offset-sm-4">
-            <select class="form-select border border-primary rounded-3 shadow-sm border-2" aria-label="Default select example">
+            <select class="form-select border border-primary rounded-3 shadow-sm border-2"
+                aria-label="Default select example">
                 <option selected>Ordenar por:</option>
                 <option value="1">Precio</option>
                 <option value="2">Marca</option>
@@ -18,224 +29,254 @@
     <div class="mt-5 row">
         <!-- FILTROS -->
         <div class="col-sm-4">
-                   
-            <button class="mb-3 btn btn-light border border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-              Filtros <i class="bi bi-arrows-expand"></i>
-            </button>              
-              
+
+            <button class="mb-3 btn btn-light border border-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Filtros <i class="bi bi-arrows-expand"></i>
+            </button>
+
             <div class="mt-2 collapse show" id="collapseExample">
-            <p style="margin-top: 30px;"><b>PRECIO</b></p>
-            <div class="row">
-                <div class="col-sm-3">
-                    <p>Mínimo (€)</p>
-                    <input class="form-control border border-primary rounded-3 border-2" min="0" type="number" name="name" placeholder="0" id="">
+                <p style="margin-top: 30px;"><b>PRECIO</b></p>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p>Mínimo (€)</p>
+                        <input class="form-control border border-primary rounded-3 border-2" min="0" type="number"
+                            name="name" placeholder="0" id="">
+                    </div>
+                    <div class="col-sm-3">
+                        <p>Máximo (€)</p>
+                        <input class="form-control border border-primary rounded-3 border-2" min="1" type="number"
+                            name="name" placeholder="2000" id="">
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <p>Máximo (€)</p>
-                    <input class="form-control border border-primary rounded-3 border-2" min="1" type="number" name="name" placeholder="2000" id="">
-                </div>
-            </div>
 
-            <div class="mt-4">
-                <p><b>MARCAS</b></p>
-                <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                <label class="p-1 form-check-label" for="flexCheckDefault">
-                    Todos
-                </label> 
-                <br>
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                <div class="mt-4">
+                    <p><b>MARCAS</b></p>
+                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox"
+                        value="" id="flexCheckDefault" style="font-size: x-large;">
                     <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Apple - 125
+                        Todos
                     </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Samsung - 732
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Huawei - 465
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Xiaomi - 361
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Sony - 212
-                    </label>
-                </div>                
-            </div>
+                    <br>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Apple - 125
+                        </label>
+                    </div>
 
-            <div class="mt-4">
-                <p><b>ALMACENAMIENTO (GB)</b></p>
-                <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                <label class="p-1 form-check-label" for="flexCheckDefault">
-                    Todos
-                </label> 
-                <br>
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        1 GB - 5
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        4 GB - 22
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        8 GB - 121
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        16 GB - 352
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        32 GB - 410
-                    </label>
-                </div>                
-            </div>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Samsung - 732
+                        </label>
+                    </div>
 
-            <div class="mt-4">
-                <p><b>SISTEMA OPERATIVO</b></p>
-                <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                <label class="p-1 form-check-label" for="flexCheckDefault">
-                    Todos
-                </label> 
-                <br>
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Android - 2720
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        iOS - 321
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Otro
-                    </label>
-                </div>                            
-            </div>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Huawei - 465
+                        </label>
+                    </div>
 
-            <div class="mt-4">
-                <p><b>TAMAÑO DE PANTALLA</b></p>
-                <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                <label class="p-1 form-check-label" for="flexCheckDefault">
-                    Hasta 5 pulgadas
-                </label> 
-                <br>
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Entre 5 y 6 pulgadas
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Entre 6 y 7 pulgadas
-                    </label>
-                </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Otro
-                    </label>
-                </div>               
-            </div>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Xiaomi - 361
+                        </label>
+                    </div>
 
-            <div class="mt-4">
-                <p><b>TIPO DE PANTALLA</b></p>
-                <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                <label class="p-1 form-check-label" for="flexCheckDefault">
-                    OLED
-                </label> 
-                <br>
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
-                    <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Capacitiva
-                    </label>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Sony - 212
+                        </label>
+                    </div>
                 </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+
+                <div class="mt-4">
+                    <p><b>ALMACENAMIENTO (GB)</b></p>
+                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox"
+                        value="" id="flexCheckDefault" style="font-size: x-large;">
                     <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Curva
+                        Todos
                     </label>
+                    <br>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            1 GB - 5
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            4 GB - 22
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            8 GB - 121
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            16 GB - 352
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            32 GB - 410
+                        </label>
+                    </div>
                 </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+
+                <div class="mt-4">
+                    <p><b>SISTEMA OPERATIVO</b></p>
+                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox"
+                        value="" id="flexCheckDefault" style="font-size: x-large;">
                     <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Curva
+                        Todos
                     </label>
+                    <br>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Android - 2720
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            iOS - 321
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Otro
+                        </label>
+                    </div>
                 </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+
+                <div class="mt-4">
+                    <p><b>TAMAÑO DE PANTALLA</b></p>
+                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox"
+                        value="" id="flexCheckDefault" style="font-size: x-large;">
                     <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Dynamic AMOLED
+                        Hasta 5 pulgadas
                     </label>
+                    <br>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Entre 5 y 6 pulgadas
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Entre 6 y 7 pulgadas
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Otro
+                        </label>
+                    </div>
                 </div>
-                
-                <div class="mt-1">
-                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+
+                <div class="mt-4">
+                    <p><b>TIPO DE PANTALLA</b></p>
+                    <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm" type="checkbox"
+                        value="" id="flexCheckDefault" style="font-size: x-large;">
                     <label class="p-1 form-check-label" for="flexCheckDefault">
-                        Otro
+                        OLED
                     </label>
-                </div>                
+                    <br>
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Capacitiva
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Curva
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Curva
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Dynamic AMOLED
+                        </label>
+                    </div>
+
+                    <div class="mt-1">
+                        <input class="form-check-input border border-primary rounded-3 border-2 shadow-sm"
+                            type="checkbox" value="" id="flexCheckDefault" style="font-size: x-large;">
+                        <label class="p-1 form-check-label" for="flexCheckDefault">
+                            Otro
+                        </label>
+                    </div>
+                </div>
             </div>
-            </div>            
         </div>
 
         <!-- PRODUCTOS -->
         <div class="col-sm-8">
-            <div class="row">                
-                <div class="btn col-sm-5 border border-primary rounded-3 shadow-sm border-2 producto"  routerLink="./producto">
-                       <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
-                        <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
-                       <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
-                       <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
-                       <p>MediaTek Helio G35, 5000mAh, Android 11</p>
-                       <h3><b>183.20</b></h3>
-                       <p class="clasificacion" style="font-size: xx-large;">
+            <div class="row">
+                <div class="btn col-sm-5 border border-primary rounded-3 shadow-sm border-2 producto"
+                    routerLink="./producto">
+                    <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
+                    <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
+                    <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
+                    <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
+                    <p>MediaTek Helio G35, 5000mAh, Android 11</p>
+                    <h3><b>183.20</b></h3>
+                    <p class="clasificacion" style="font-size: xx-large;">
                         <input id="radio1" type="radio" name="estrellas" value="5">
                         <label for="radio1">★</label>
                         <input id="radio2" type="radio" name="estrellas" value="4">
@@ -246,41 +287,43 @@
                         <label for="radio4">★</label>
                         <input id="radio5" type="radio" name="estrellas" value="1">
                         <label for="radio5">★</label>
-                      </p>
+                    </p>
                 </div>
-                
-                <div class="btn col-sm-5 offset-sm-2 border border-primary rounded-3 shadow-sm border-2 producto" routerLink="./producto">
-                     <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
-                     <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
-                     <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
-                     <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
-                     <p>MediaTek Helio G35, 5000mAh, Android 11</p>
-                     <h3><b>183.20</b></h3>
-                     <p class="clasificacion" style="font-size: xx-large;">
-                      <input id="radio1" type="radio" name="estrellas" value="5">
-                      <label for="radio1">★</label>
-                      <input id="radio2" type="radio" name="estrellas" value="4">
-                      <label for="radio2">★</label>
-                      <input id="radio3" type="radio" name="estrellas" value="3">
-                      <label for="radio3">★</label>
-                      <input id="radio4" type="radio" name="estrellas" value="2">
-                      <label for="radio4">★</label>
-                      <input id="radio5" type="radio" name="estrellas" value="1">
-                      <label for="radio5">★</label>
+
+                <div class="btn col-sm-5 offset-sm-2 border border-primary rounded-3 shadow-sm border-2 producto"
+                    routerLink="./producto">
+                    <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
+                    <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
+                    <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
+                    <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
+                    <p>MediaTek Helio G35, 5000mAh, Android 11</p>
+                    <h3><b>183.20</b></h3>
+                    <p class="clasificacion" style="font-size: xx-large;">
+                        <input id="radio1" type="radio" name="estrellas" value="5">
+                        <label for="radio1">★</label>
+                        <input id="radio2" type="radio" name="estrellas" value="4">
+                        <label for="radio2">★</label>
+                        <input id="radio3" type="radio" name="estrellas" value="3">
+                        <label for="radio3">★</label>
+                        <input id="radio4" type="radio" name="estrellas" value="2">
+                        <label for="radio4">★</label>
+                        <input id="radio5" type="radio" name="estrellas" value="1">
+                        <label for="radio5">★</label>
                     </p>
                 </div>
             </div>
 
             <!-- agregar de forma dinamica dependiendo de la base de datos -->
             <div class="mt-5 row">
-                <div class="btn col-sm-5 border border-primary rounded-3 shadow-sm border-2 producto" routerLink="./producto">
-                        <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
-                        <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
-                       <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
-                       <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
-                       <p>MediaTek Helio G35, 5000mAh, Android 11</p>
-                       <h3><b>183.20</b></h3>
-                       <p class="clasificacion" style="font-size: xx-large;">
+                <div class="btn col-sm-5 border border-primary rounded-3 shadow-sm border-2 producto"
+                    routerLink="./producto">
+                    <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
+                    <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
+                    <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
+                    <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
+                    <p>MediaTek Helio G35, 5000mAh, Android 11</p>
+                    <h3><b>183.20</b></h3>
+                    <p class="clasificacion" style="font-size: xx-large;">
                         <input id="radio1" type="radio" name="estrellas" value="5">
                         <label for="radio1">★</label>
                         <input id="radio2" type="radio" name="estrellas" value="4">
@@ -291,29 +334,30 @@
                         <label for="radio4">★</label>
                         <input id="radio5" type="radio" name="estrellas" value="1">
                         <label for="radio5">★</label>
-                      </p>
-                </div>
-                <div class="btn col-sm-5 offset-sm-2 border border-primary rounded-3 shadow-sm border-2 producto" routerLink="./producto">
-                     <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
-                     <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
-                     <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
-                     <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
-                     <p>MediaTek Helio G35, 5000mAh, Android 11</p>
-                     <h3><b>183.20</b></h3>
-                     <p class="clasificacion" style="font-size: xx-large;">
-                      <input id="radio1" type="radio" name="estrellas" value="5">
-                      <label for="radio1">★</label>
-                      <input id="radio2" type="radio" name="estrellas" value="4">
-                      <label for="radio2">★</label>
-                      <input id="radio3" type="radio" name="estrellas" value="3">
-                      <label for="radio3">★</label>
-                      <input id="radio4" type="radio" name="estrellas" value="2">
-                      <label for="radio4">★</label>
-                      <input id="radio5" type="radio" name="estrellas" value="1">
-                      <label for="radio5">★</label>
                     </p>
-                </div> 
-                
+                </div>
+                <div class="btn col-sm-5 offset-sm-2 border border-primary rounded-3 shadow-sm border-2 producto"
+                    routerLink="./producto">
+                    <!-- RELLENAR CON DATOS DE LA BASE DE DATOS -->
+                    <img src="../../../../assets/images/galaxyA22.png" class="img-fluid" alt="">
+                    <p class="mt-3"><b>SAMSUNG GALAXY A22</b></p>
+                    <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+</p>
+                    <p>MediaTek Helio G35, 5000mAh, Android 11</p>
+                    <h3><b>183.20</b></h3>
+                    <p class="clasificacion" style="font-size: xx-large;">
+                        <input id="radio1" type="radio" name="estrellas" value="5">
+                        <label for="radio1">★</label>
+                        <input id="radio2" type="radio" name="estrellas" value="4">
+                        <label for="radio2">★</label>
+                        <input id="radio3" type="radio" name="estrellas" value="3">
+                        <label for="radio3">★</label>
+                        <input id="radio4" type="radio" name="estrellas" value="2">
+                        <label for="radio4">★</label>
+                        <input id="radio5" type="radio" name="estrellas" value="1">
+                        <label for="radio5">★</label>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
