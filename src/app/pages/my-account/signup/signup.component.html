@@ -17,7 +17,7 @@
                     <h3 class="card-title text-center"><u>REGÍ</u>STRATE EN FUTURA</h3>
                     <p class="card-text text-center" id="bold">Rellena este formulario para crear una cuenta en FUTURA.</p>
                     <p class="card-text">Los campos marcados con <span class="text-danger fw-bold">*</span> son obligatorios.</p>
-                    <form (ngSubmit)="signUp()" #singupForm="ngForm">
+                    <form (submit)="signUp()" #singupForm="ngForm">
                         <div>
                             <div class="row">
                                 <div class="col-sm-12 mb-3">
@@ -28,18 +28,18 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-5 offset-sm-1 mb-4">
-                                    <label for="name" class="form-label">NOMBRE <span class="text-danger fw-bold">*</span></label>
-                                    <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
+                                    <label for="firstName" class="form-label">NOMBRE <span class="text-danger fw-bold">*</span></label>
+                                    <input [(ngModel)]="user.firstName" type="text" class="form-control" id="firstName" placeholder="Nombre" name="firstName" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-5 offset-sm-1 mb-4">
-                                    <label for="first_surname" class="form-label">PRIMER APELLIDO <span class="text-danger fw-bold">*</span></label>
-                                    <input type="text" class="form-control" id="first_surname" placeholder="Primer apellido" name="fisrt_name" required>
+                                    <label for="lastName1" class="form-label">PRIMER APELLIDO <span class="text-danger fw-bold">*</span></label>
+                                    <input [(ngModel)]="user.lastName1" type="text" class="form-control" id="lastName1" placeholder="Primer apellido" name="lastName1" required>
                                 </div>
                                 <div class="col-sm-5 mb-5">
-                                    <label for="second_surname" class="form-label">SEGUNDO APELLIDO</label>
-                                    <input type="text" class="form-control" id="second_surname" placeholder="Segundo apellido" name="second_surname">
+                                    <label for="lastName2" class="form-label">SEGUNDO APELLIDO</label>
+                                    <input [(ngModel)]="user.lastName2" type="text" class="form-control" id="lastName2" placeholder="Segundo apellido" name="lastName2">
                                 </div>
                             </div>
                         </div>
@@ -54,14 +54,14 @@
                             <div class="row">
                                 <div class="col-sm-5 offset-sm-1 mb-4">
                                     <label for="email" class="form-label">CORREO ELECTRÓNICO <span class="text-danger fw-bold">*</span></label>
-                                    <input type="email" class="form-control" id="email" placeholder="Dirección de email" name="email" required>
+                                    <input [(ngModel)]="user.email" type="email" class="form-control" id="email" placeholder="Dirección de email" name="email" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-5 offset-sm-1 mb-4">
                                     <label for="password" class="form-label">CONTRASEÑA <span class="text-danger fw-bold">*</span></label>
                                     <div class="input-group">
-                                        <input [type]="fieldPasswordType ? 'text' : 'password'" class="form-control" id="password" placeholder="Contraseña" name="password" required>
+                                        <input [(ngModel)]="user.password" [type]="fieldPasswordType ? 'text' : 'password'" class="form-control" id="password" placeholder="Contraseña" name="password" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text">
                                               <i [ngClass]="{
@@ -97,8 +97,8 @@
                             </div>          
                         </div>
                         <div class="d-grid gap-2 col-sm-4 mx-auto">
-                            <button type="submit" class="btn btn-primary shadow" routerLink="/mi-cuenta">CREAR CUENTA</button>
-                          </div>
+                            <button type="submit" class="btn btn-primary shadow" >CREAR CUENTA</button>
+                        </div>
                     </form>
                 </div>
             </div>
