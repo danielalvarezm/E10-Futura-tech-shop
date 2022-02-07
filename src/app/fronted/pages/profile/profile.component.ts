@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { User } from '../../_models';
 
-import {AuthService} from '../../services/auth.service';
+import {AuthService} from '../../../backend/services/auth.service';
 
 @Component({
   selector: 'app-profile',

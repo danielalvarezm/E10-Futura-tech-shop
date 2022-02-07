@@ -8,8 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 
-import {AuthGuard} from './auth.guard'
-import {TokenInterceptorService} from './services/token-interceptor.service';
+import {AuthGuard} from '../backend/auth.guard'
+import {TokenInterceptorService} from '../backend/services/token-interceptor.service';
 
 @NgModule({
   declarations: [
