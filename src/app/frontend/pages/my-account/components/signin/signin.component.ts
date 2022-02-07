@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '@app/fronted/_models/user';
+import { User } from '@app/frontend/_models/user';
 import { AuthService } from '../../../../../backend/services/auth.service';
 
 @Component({
@@ -11,16 +11,15 @@ import { AuthService } from '../../../../../backend/services/auth.service';
 export class SigninComponent {
 
   user = new User("", "", "", "", "", "", false, "");
-
   loading = false;
   fieldTextType: boolean = false;
+  // Error para el login
+  error;
 
   constructor(public authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void { }
 
-
-  signIn() { 
+  signIn() {
     console.log(this.user);
     this.authService.signInUser(this.user)
     .subscribe(
@@ -28,8 +27,13 @@ export class SigninComponent {
         console.log(res);
         localStorage.setItem('token', res.token);
         this.router.navigate(['/']);
+        return true;
       },
-      err => console.log(err)
+       err => {
+        console.log(err);
+        this.error = err;
+        return false;
+       }
     )
   }
 

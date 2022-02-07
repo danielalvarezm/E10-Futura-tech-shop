@@ -9,7 +9,6 @@ const jwt = require('jsonwebtoken');
 router.get('/',(req, res) => res.send('Hello world'));
 
 router.post('/signup', async (req, res) => {
-    console.log(req.body);
     const user = new User({
         firstName: req.body.firstName,
         lastName1: req.body.lastName1,
@@ -22,7 +21,6 @@ router.post('/signup', async (req, res) => {
 
     const token = jwt.sign({ _id: user._id }, 'secretKey');
     res.status(200).json({ token });
-    //res.send('Se ha creado correctamente el usuario.');
 })
 
 router.post('/signin', async (req, res) => {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '@app/fronted/_models/user';
+import { User } from '@app/frontend/_models/user';
 import {Router} from '@angular/router'
 
 @Injectable({
@@ -8,7 +8,7 @@ import {Router} from '@angular/router'
 })
 export class AuthService {
 
-  private URL = 'http://localhost:3000/api';
+  private URL = 'http://10.6.129.122/api';
 
   constructor(private http: HttpClient, private router: Router) { }
 
