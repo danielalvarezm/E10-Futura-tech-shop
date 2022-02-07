@@ -27,13 +27,13 @@ export class AuthService {
     return false;
   }
 
-  getToken() {
-    return localStorage.getItem('token');
-  }
-
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/mi-cuenta']);
+    // this.router.navigate(['/mi-cuenta']);
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
   }
 }
 

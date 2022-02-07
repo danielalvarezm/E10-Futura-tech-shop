@@ -20,14 +20,11 @@ export class SigninComponent {
 
 
   signIn() {
-    console.log(this.user);
     this.authService.signInUser(this.user)
     .subscribe(
       res => { 
-        console.log(res);
         localStorage.setItem('token', res.token);
         this.router.navigate(['/']);
-        return true;
       },
        err => {
         console.log(err);

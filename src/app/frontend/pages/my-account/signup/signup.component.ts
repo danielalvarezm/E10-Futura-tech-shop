@@ -22,10 +22,8 @@ export class SignupComponent {
     this.authService.signUpUser(this.user)
       .subscribe(
         res => {
-          console.log(res);
           localStorage.setItem('token', res.token);
           this.router.navigate(['/mi-cuenta']);
-          return true;
         },
         err => {
           console.log(err);
