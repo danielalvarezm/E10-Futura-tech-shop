@@ -1,39 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { first } from 'rxjs/operators';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '@app/_models/user';
+import { AuthService } from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css']
 })
-export class SigninComponent implements OnInit {
+export class SigninComponent {
 
-  signInForm: FormGroup;
+  user = new User("", "", "", "", "", "", false, "");
+
   loading = false;
-  submitted = false;
-  returnUrl: string;
-  error = '';
-
   fieldTextType: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute) {}
+  constructor(public authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.signInForm = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+  ngOnInit(): void { }
 
-    // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
+  signIn() { 
+    console.log(this.user);
+    this.authService.signInUser(this.user)
+    .subscribe(
+      res => { 
+        console.log(res);
+        localStorage.setItem('token', res.token);
+        this.router.navigate(['/']);
+      },
+      err => console.log(err)
+    )
   }
-
-  // convenience getter for easy access to form fields
-  get f() { return this.signInForm.controls; }
-
-  onSubmit() { }
 
   toggleFieldTextType() {
     this.fieldTextType = !this.fieldTextType;

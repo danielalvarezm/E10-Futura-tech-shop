@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 
+import {AuthGuard} from './auth.guard'
+import {TokenInterceptorService} from './services/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,14 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     CommonModule,
     AppRoutingModule,
     HttpClientModule
+  ],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
