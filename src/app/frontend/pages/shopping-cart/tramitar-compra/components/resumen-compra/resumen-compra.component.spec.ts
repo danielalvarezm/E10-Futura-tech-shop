@@ -30,12 +30,8 @@ describe("ResumenCompraComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("the component should have a button to modify the orders.", () => {
-    const fixture = TestBed.createComponent(ResumenCompraComponent);
-    fixture.detectChanges();
+  it('should render title in a h4 tag to show the technical characteristics', () => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector("a").textContent).toContain(
-      "MODIFICAR"
-    );
+    expect(compiled.querySelector('h4').textContent).toContain('RESUMEN DE COMPRA');
   });
 });

@@ -7,7 +7,7 @@ import { Laptop } from '@app/frontend/_models/laptop';
 })
 export class LaptopService {
 
-  private URL = 'http://10.6.129.122/api';
+  public URL = 'http://10.6.129.122/api';
 
   constructor(private http: HttpClient) {}
 

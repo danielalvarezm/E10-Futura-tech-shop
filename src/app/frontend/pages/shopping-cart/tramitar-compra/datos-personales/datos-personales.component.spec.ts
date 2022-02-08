@@ -30,6 +30,16 @@ describe("DatosPersonalesComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  it('there must be a method called ngOnInit.', () => {
+    let ngOnInit = spyOn(component, 'ngOnInit')
+    component.ngOnInit();
+    expect(ngOnInit).toHaveBeenCalled();
+  });
+
+  it('the attributes values are correct.', () => {
+    expect(component.user).not.toBe(null);
+  });
+
   it("the component should have a button to modify the personal details.", () => {
     const fixture = TestBed.createComponent(DatosPersonalesComponent);
     fixture.detectChanges();

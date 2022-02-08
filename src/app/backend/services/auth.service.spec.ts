@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { User } from '@app/frontend/_models';
@@ -11,10 +11,10 @@ describe('AuthService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule, RouterTestingModule]
+      imports: [HttpClientTestingModule, RouterTestingModule]
     });
     service = TestBed.inject(AuthService);
-    localStorage.setItem("token", "tokenPrueba");
+    localStorage.setItem("token", "tokenTest");
   });
 
   afterEach(() => {
@@ -27,14 +27,14 @@ describe('AuthService', () => {
   });
 
   it('there must be a method called signUpUser', () => {
-    user = new User("", "test@gmail.com", "testpwd", "testname", "testlastnam1", "testlastname2", false);
+    user = new User("", "test@gmail.com", "testpwd", "testname", "testlastnam1", "testlastname2", false, 0);
     let signUpUser = spyOn(service, 'signUpUser');
     service.signUpUser(user);
     expect(signUpUser).toHaveBeenCalled();
   });
 
   it('there must be a method called signInUser', () => {
-    user = new User("", "test@gmail.com", "testpwd", "", "", "", false);
+    user = new User("", "test@gmail.com", "testpwd", "", "", "", false, 0);
     let signInUser = spyOn(service, 'signInUser');
     service.signInUser(user);
     expect(signInUser).toHaveBeenCalled();
@@ -55,6 +55,6 @@ describe('AuthService', () => {
   });
 
   it('getToken() should return the locally stored token', () => {
-    expect(service.getToken()).toEqual("tokenPrueba");
+    expect(service.getToken()).toEqual("tokenTest");
   });
 });

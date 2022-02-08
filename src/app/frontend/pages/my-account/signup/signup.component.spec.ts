@@ -4,15 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { User } from '@app/frontend/_models';
+import { MyAccountComponent } from '../my-account.component';
 
 import { SignupComponent } from './signup.component';
 
 describe('SignupComponent', () => {
   let component: SignupComponent;
   let fixture: ComponentFixture<SignupComponent>;
-  let user: User;
   
   beforeEach(async () => {
+    RouterTestingModule.withRoutes([
+      { path: '/mi-cuenta', component: MyAccountComponent}
+    ]);
     await TestBed.configureTestingModule({
       imports: [FormsModule, HttpClientModule, RouterTestingModule],
       declarations: [ SignupComponent ]

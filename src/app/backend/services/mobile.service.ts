@@ -7,7 +7,7 @@ import { Mobile } from '@app/frontend/_models/mobile';
 })
 export class MobileService {
 
-  private URL = 'http://10.6.129.122/api';
+  public URL = 'http://10.6.129.122/api';
 
   constructor(private http: HttpClient) {}
 
@@ -22,8 +22,4 @@ export class MobileService {
   addProduct(mobile: Mobile, info) {
     return this.http.put<any>(this.URL + '/mobilesToCart/' + mobile._id, info);
   }
-
-  /*addProduct(id: string) {
-    return this.http.put<any>(this.URL + '/mobilesToCart', id);
-  }*/
 }

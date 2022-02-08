@@ -4,7 +4,7 @@ import { MainPageComponent } from './main-page.component';
 
 import { MovilesComponent } from './moviles/moviles.component';
 import { ProductoComponent } from './moviles/producto/producto.component';
-import { LaptopsComponent } from './laptos/laptops.component';
+import { LaptopsComponent } from './laptops/laptops.component';
 
 const routes: Routes = [
   {

@@ -17,7 +17,6 @@ import { LaptopService } from '../../../../backend/services/laptop.service';
       this.laptopsService.getLaptops()
       .subscribe(
         res => {
-          console.log(res)
           this.laptops = res;
         },
         err => console.log(err)

@@ -14,7 +14,7 @@ export class ConfirmacionComponent {
   pedido = Math.floor(Math.random() * (999999 - 100000)) + 100000;
   total = localStorage.getItem('price');
   products = JSON.parse(localStorage.getItem('products'));
-  size = this.products.length;
+  size = Object.keys(this.products).length;
 
   constructor(private shoppingCartService: ShoppingCartService, private router: Router ) { }
 

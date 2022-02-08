@@ -2,12 +2,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MainPageComponent } from '@app/frontend/pages/main-page/main-page.component';
 
 import { SigninComponent } from './signin.component';
 
 describe('SigninComponent', () => {
   let component: SigninComponent;
   let fixture: ComponentFixture<SigninComponent>;
+
+  RouterTestingModule.withRoutes([
+    { path: '/', component: MainPageComponent}
+  ])
   
   beforeEach(async () => {
     await TestBed.configureTestingModule({
