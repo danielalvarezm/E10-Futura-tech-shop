@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { MobileService } from '@app/backend/services/mobile.service';
 import {ShoppingCartService} from '@app/backend/services/shoppingCart.service';
+
 
 @Component({
   selector: 'app-shopping-cart',
@@ -15,7 +16,7 @@ export class ShoppingCartComponent implements OnInit {
 
   total = 0
 
-  constructor(private shoppingCartService: ShoppingCartService) { }
+  constructor(private shoppingCartService: ShoppingCartService, private router: Router) { }
 
   ngOnInit() {
     this.shoppingCartService.getIdProducts(localStorage.getItem('email'))
@@ -25,7 +26,7 @@ export class ShoppingCartComponent implements OnInit {
         for (let i = 0; i < this.idProducts.length; i++) {
           this.shoppingCartService.getProduct(this.idProducts[i].id).subscribe(
             res => {
-              this.products.push({"product": res, "amount": this.idProducts[i].amount});
+              this.products.push({"product": res, "amount": this.idProducts[i].amount, "id": this.idProducts[i]._id});
               this.total += res.price * Number(this.idProducts[i].amount);
               if (i == this.idProducts.length - 1) {
                 this.total = Math.trunc(this.total * 100) / 100;
@@ -39,6 +40,15 @@ export class ShoppingCartComponent implements OnInit {
       },
       err => console.log(err)
     );
+  }
+
+  deleteProduct(idProduct) {
+    this.shoppingCartService.deleteProduct(idProduct, localStorage.getItem("email")).subscribe(
+      res => {
+        window.location.reload();
+      },
+      err => console.log(err)
+    );  
   }
 }
 

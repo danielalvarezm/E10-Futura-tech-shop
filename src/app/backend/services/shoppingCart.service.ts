@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ShoppingCartService {
 
-  public URL = 'http://10.6.129.122/api';
+  private URL = 'http://10.6.129.122/api';
 
   constructor(private http: HttpClient) {}
 
@@ -26,7 +26,17 @@ export class ShoppingCartService {
     return this.http.put<any>(this.URL + '/updateWallet/' + email, {"wallet": wallet});
   }
 
+  doPurchase(email, body) {
+    return this.http.put<any>(this.URL + '/doPurchase/' + email, body);
+  }
+
   clearCart(email) {
     return this.http.put<any>(this.URL + '/clearCart/' + email, {"cart": ""});
+  }
+
+  deleteProduct(idProduct, email) {
+    console.log(idProduct);
+    console.log(email);
+    return this.http.put<any>(this.URL + '/deleteProduct/' + idProduct, {"email": email});
   }
 }

@@ -29,6 +29,22 @@ router.put('/updateWallet/:email', async (req, res) => {
     res.send(user);
 });
 
+router.put('/doPurchase/:email', async (req, res) => {
+    const user = await User.findOneAndUpdate(
+        { "email": req.params.email },
+        { "wallet": req.body.wallet }
+    );
+
+    for (let i = 0; i < req.body.products.length; i++) {
+        const mobile = await Mobile.findByIdAndUpdate(
+            { "_id": req.body.products[i].product._id },
+            { $inc: { "stock": -req.body.products[i].amount } }
+        );
+    }
+
+    res.send(user);
+});
+
 router.put('/clearCart/:email', async (req, res) => {
     const user = await User.findOneAndUpdate(
         { "email": req.params.email },
@@ -36,5 +52,15 @@ router.put('/clearCart/:email', async (req, res) => {
     );
     res.send(user);
 });
+
+router.put('/deleteProduct/:_id', async (req, res) => {
+    const user = await User.findOneAndUpdate(
+        { "email": req.body.email },
+        { $pull: { shoppingCart: { _id: req.params._id } } }
+    );
+    res.send(user);
+})
+
+
 
 module.exports = router;
