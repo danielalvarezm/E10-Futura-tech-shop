@@ -5,7 +5,7 @@ name: Tests
 
 on:
   push:
-    branches: [ registerUser ]
+    branches: [ main, develop, storeProducts ]
   pull_request:
     branches: [ main ]
 
