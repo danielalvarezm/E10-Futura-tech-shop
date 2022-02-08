@@ -12,17 +12,17 @@
         </div>
     </div>
     <div class="mt-2 row">
-        <div class="col-sm-6">
+        <div class="col-sm-6" >
             <!-- FOTOS PRODUCTO -->
             <div class="">
-                <img class="img-fluid" src="../../../../assets/images/galaxyA22.png" alt="foto">
+                <img class="img-fluid" src="{{mobiles.image}}" alt="foto">
             </div>
         </div>
-
         <div class="col-sm-5 offset-sm-1 border border-primary rounded-3 shadow-sm border-2">
             <div class="row">
                 <div class="p-2 col-sm-7">
-                    <h4 class="card-title mt-3 mx-2"><u>SAM</u>SUNG GALAXY A22</h4>
+                    <!-- Primer elemento del array {{mobiles}} -->
+                    <h4 class="card-title mt-3 mx-2">{{mobiles.name}}</h4>
                 </div>
                 <div class="col-sm-1 offset-sm-3">
                     <p class="clasificacion" style="font-size: 50px;">
@@ -31,22 +31,17 @@
                     </p>
                 </div>
             </div>
-            <p>5G, Blanco, 64 GB, 4 GB RAM, 6.6" FHD+, Android 11</p>
+            <p>{{mobiles.description}}</p>
             
             <div class="row">
                 <div class="col-sm-4">
-                    <p class="clasificacion" style="font-size: xx-large;">
-                        <input id="radio1" type="radio" name="estrellas" value="5">
-                        <label for="radio1">★</label>
-                        <input id="radio2" type="radio" name="estrellas" value="4">
-                        <label for="radio2">★</label>
-                        <input id="radio3" type="radio" name="estrellas" value="3">
-                        <label for="radio3">★</label>
-                        <input id="radio4" type="radio" name="estrellas" value="2">
-                        <label for="radio4">★</label>
-                        <input id="radio5" type="radio" name="estrellas" value="1">
-                        <label for="radio5">★</label>
-                      </p>
+                    <p class="clasificacion" style="font-size: xx-large;">   
+                        <span *ngIf="mobiles.mark > 0">★</span>
+                        <span *ngIf="mobiles.mark > 1">★</span>
+                        <span *ngIf="mobiles.mark > 2">★</span>
+                        <span *ngIf="mobiles.mark > 3">★</span>
+                        <span *ngIf="mobiles.mark > 4">★</span>
+                    </p> 
                 </div>
                 <div class="mt-3 col-sm-3"> 
                     <a href=""><u>2 Opiniones</u></a>
@@ -60,21 +55,20 @@
                     <p class="p-2"><b>Cantidad</b></p>
                 </div>
                 <div class="col-sm-2 col-xs-2">
-                    <input class="form-control border border-primary rounded-3 border-2" min="0" type="number" name="name" placeholder="0" id="">
+                    <input [(ngModel)]="amount" class="form-control border border-primary rounded-3 border-2" min="1" type="number" name="name" placeholder="" id="cantidad">
                 </div>
             </div>
             
             <div class="text-end">
-                <h1><b>183.20€</b></h1>
+                <h1><b>{{mobiles.price}}€</b></h1>
                 <p style="font-weight: 300;">IVA incluido</p>
             </div>
                       
             <div class="mb-4 row">
                 <div class="col-sm-8 offset-sm-2">
                     <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-primary btn-lg btn-block shadow-sm">AÑADIR AL CARRITO<i class="bi bi-chevron-compact-right"></i></button>
+                        <button (click)="addProduct()" type="button" class="btn btn-primary btn-lg btn-block shadow-sm">AÑADIR AL CARRITO<i class="bi bi-chevron-compact-right"></i></button>
                     </div>
-                    
                 </div>
             </div>            
         </div>
@@ -92,7 +86,7 @@
                         <p><b>Sistema Operativo:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">Android</p>
+                        <p class="fino">{{mobiles.OS}}</p>
                     </div>
                 </div>
             </div>
@@ -107,7 +101,7 @@
                         <p><b>Características del procesador:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">Mediatek MT6739</p>
+                        <p class="fino">{{mobiles.cpu}}</p>
                     </div>
                 </div>
             </div>
@@ -122,17 +116,7 @@
                         <p><b>Tamaño:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">16.76 cm / 6.6 "</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-2">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <p><b>Resolución:</b></p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="fino">2400 x 1080 pixels</p>
+                        <p class="fino">{{mobiles.screenSize}}</p>
                     </div>
                 </div>
             </div>
@@ -154,20 +138,10 @@
             <div class="mx-2">
                 <div class="row">
                     <div class="col-sm-3">
-                        <p><b>Características cámara trasera:</b></p>
+                        <p><b>Características cámara:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">2 MP Zoom + 8 MP Ultra Gran Angular + 48 MP Principal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-2">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <p><b>Resolución cámara frontal:</b></p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="fino">8 megapixel</p>
+                        <p class="fino">{{mobiles.camera}}</p>
                     </div>
                 </div>
             </div>
@@ -178,16 +152,6 @@
                     </div>
                     <div class="col-sm-6">
                         <p class="fino">Sí</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-2">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <p><b>Cámara trasera:</b></p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="fino">Triple Cam</p>
                     </div>
                 </div>
             </div>
@@ -232,7 +196,7 @@
                         <p><b>Memoria interna:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">128 GB</p>
+                        <p class="fino">{{mobiles.storage}} GB</p>
                     </div>
                 </div>
             </div>
@@ -242,7 +206,7 @@
                         <p><b>Memoria RAM:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">8 GB</p>
+                        <p class="fino">{{mobiles.ram}} GB</p>
                     </div>
                 </div>
             </div>
@@ -257,7 +221,7 @@
                         <p><b>Red:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">5G</p>
+                        <p class="fino">4G/5G</p>
                     </div>
                 </div>
             </div>
@@ -322,7 +286,7 @@
                         <p><b>Capacidad batería:</b></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="fino">5000 mAh</p>
+                        <p class="fino">{{mobiles.battery}} mAh</p>
                     </div>
                 </div>
             </div>

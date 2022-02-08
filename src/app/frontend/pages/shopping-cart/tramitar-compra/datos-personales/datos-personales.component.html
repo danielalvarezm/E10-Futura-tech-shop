@@ -54,16 +54,11 @@
     <div class="row">
         <div class="col-sm-7">
             <h5 class="mt-5" style="font-weight: 400;">INFORMACIÓN PERSONAL DEL CLIENTE</h5>
-            <p>Introduce el número de tu documento de identificación.</p>
-            <div class="input-group mb-3  w-75">
-                <span class="input-group-text" id="basic-addon1">DNI</span>
-                <input type="text" class="form-control" id="name" placeholder="Número de tu documento de identificación" required>
-            </div>
             <div class="border border-primary border-1 border-rounded rounded-3">
                 <div class="d-flex justify-content-md-between mt-2">
                     <div class="mx-3">
                         <p><b>NOMBRE Y APELLIDOS</b></p>
-                        <p>María Hernández Hernández</p>
+                        <p>{{user.firstName}} {{user.lastName1}} {{user.lastName2}}</p>
                     </div>
                     <div>
                         <button type="button" class="mx-3 btn btn-outline-primary mt-2">MODIFICAR</button>
@@ -78,7 +73,7 @@
                 </div>
                 <div class="mx-3">
                     <p><b>TELÉFONO</b></p>
-                    <p>64646464</p>
+                    <p>647419604</p>
                 </div>
             </div>
         </div>

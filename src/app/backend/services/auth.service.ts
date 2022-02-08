@@ -28,8 +28,7 @@ export class AuthService {
   }
 
   logout() {
-    localStorage.removeItem('token');
-    // this.router.navigate(['/mi-cuenta']);
+    localStorage.clear();
   }
 
   getToken() {

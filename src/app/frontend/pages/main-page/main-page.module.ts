@@ -11,6 +11,7 @@ import { ProductsInterestComponent } from './components/products-interest/produc
 import { NewsComponent } from './components/news/news.component';
 import { ProductoComponent } from './moviles/producto/producto.component';
 import { MovilesComponent } from './moviles/moviles.component';
+import { LaptopsComponent } from './laptos/laptops.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MovilesComponent } from './moviles/moviles.component';
     ProductsInterestComponent,
     NewsComponent,
     MovilesComponent,
+    LaptopsComponent,
     ProductoComponent
   ],
   imports: [

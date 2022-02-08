@@ -79,7 +79,7 @@
                             <p>Realizado:</p>
                         </div>
                         <div class="col-sm-6">
-                            <p><b>jueves 4 de noviembre de 2021</b></p>
+                            <p><b>{{ myDate | date:'medium' }}</b></p>
                         </div>
                     </div>
                     <div class="row">
@@ -87,7 +87,7 @@
                             <p>Número de pedido:</p>
                         </div>
                         <div class="col-sm-6">
-                            <p><b>012457531178</b></p>
+                            <p><b>{{pedido}}</b></p>
                         </div>
                     </div>
                     <div class="row">
@@ -95,7 +95,7 @@
                             <p>Contiene:</p>
                         </div>
                         <div class="col-sm-6">
-                            <p><b>2 artículos</b></p>
+                            <p><b>{{size}} artículos</b></p>
                         </div>
                     </div>
                     <div class="row">
@@ -103,7 +103,7 @@
                             <p>Importe:</p>
                         </div>
                         <div class="col-sm-6">
-                            <p><b>693.70€</b></p>
+                            <p><b>{{total}}</b></p>
                         </div>
                     </div>
                     <div class="row">
@@ -114,15 +114,14 @@
                             <p><b>Pendiente de entrega</b></p>
                         </div>
                     </div>
-                    <p class="mt-4"><b>Recibirá su compra en su dirección el sábado 6 de noviembre de 2021</b></p>
+                    <p class="mt-4"><b>Recibirá su compra en su dirección el el {{ entrega }}-{{ myDate | date:'MM-yyyy' }} aproximadamente</b></p>
                     
                 </div>
             </div> 
         </div>
         <div class="d-flex justify-content-center mt-5">
             <div class="w-50 d-grid gap-2">
-                <button type="button" class="mb-3 btn btn-primary btn-lg btn-block shadow-sm" routerLink="/">VOLVER AL INICIO<i class="bi bi-chevron-compact-right"></i></button>
+                <button (click)="clearCart()" type="button" class="mb-3 btn btn-primary btn-lg btn-block shadow-sm" routerLink="/">VOLVER AL INICIO<i class="bi bi-chevron-compact-right"></i></button>
             </div>
         </div>
-
 </div>

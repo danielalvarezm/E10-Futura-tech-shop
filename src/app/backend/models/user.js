@@ -7,7 +7,12 @@ const UserSchema = new Schema ({
     lastName2:{ type: String},
     email: { type: String, required: true},
     password: { type: String, required: true},
-    admin: { type: Boolean, required: true} 
+    admin: { type: Boolean, required: true},
+    shoppingCart: [{
+        id:  String ,
+        amount:  String
+    }],
+    wallet:{ type: Number, required: true } 
 }, {
     timestamps: true
 });

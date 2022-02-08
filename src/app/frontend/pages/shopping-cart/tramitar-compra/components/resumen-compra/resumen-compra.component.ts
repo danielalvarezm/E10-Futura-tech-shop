@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 
 export class ResumenCompraComponent {
 
+  total = Number(localStorage.getItem('price'));
+  products = JSON.parse(localStorage.getItem('products'));
+  
+
   constructor() { }
 
 }

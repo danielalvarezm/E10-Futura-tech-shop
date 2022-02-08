@@ -10,7 +10,7 @@ import { AuthService } from '../../../../../backend/services/auth.service';
 })
 export class SigninComponent {
 
-  user = new User("", "", "", "", "", "", false, "");
+  user = new User("", "", "", "", "", "", false, 0);
   loading = false;
   fieldTextType: boolean = false;
   // Error para el login
@@ -24,6 +24,7 @@ export class SigninComponent {
     .subscribe(
       res => { 
         localStorage.setItem('token', res.token);
+        localStorage.setItem('email', this.user.email);
         this.router.navigate(['/']);
       },
        err => {

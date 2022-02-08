@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent {
 
-  user = new User("", "", "", "", "", "", false, "");
+  user = new User("", "", "", "", "", "", false, 0);
   fieldPasswordType: boolean = false;
   fieldConfirmPasswordType: boolean = false;
 

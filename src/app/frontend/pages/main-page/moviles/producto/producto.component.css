@@ -27,16 +27,11 @@ p.clasificacion {
     top: -100px;
   }
   
-  p.clasificacion label {
+  p.clasificacion span {
     float: right;
-    color: rgb(104, 104, 104);
-  }
-  
-  p.clasificacion label:hover,
-  p.clasificacion label:hover ~ label,
-  p.clasificacion input:checked ~ label {
     color: rgb(14, 118, 168);
   }
+  
 /* ------------------------------------- */
 
 .producto:hover{

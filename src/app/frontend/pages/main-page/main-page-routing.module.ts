@@ -4,13 +4,16 @@ import { MainPageComponent } from './main-page.component';
 
 import { MovilesComponent } from './moviles/moviles.component';
 import { ProductoComponent } from './moviles/producto/producto.component';
+import { LaptopsComponent } from './laptos/laptops.component';
 
 const routes: Routes = [
   {
     path: '',
     children: [
-      { path: 'moviles/producto', component: ProductoComponent},
+      { path: 'moviles/producto/:id', component: ProductoComponent},
       { path: 'moviles', component: MovilesComponent},
+      { path: 'ordenadores/:id', component: ProductoComponent},
+      { path: 'ordenadores', component: LaptopsComponent},
       { path: '', component: MainPageComponent},
       { path: '**', redirectTo: '', pathMatch: 'full' }
     ]

@@ -1,35 +1,26 @@
 <div class="mt-3 card-shadow border border-primary rounded-3 shadow-sm border-2">
     <div class="card-body">
         <h4 class="card-title mt-3"><u>RE</u>SUMEN DE COMPRA</h4>
-        <a class="d-flex justify-content-end mx-4" href=""><u>MODIFICAR</u></a>
+
+        <a class="d-flex justify-content-end mx-4" href="" routerLink="/carrito"><u>MODIFICAR</u></a>
 
         <div class="bg-info">
             <hr style="border: 1px solid rgb(14, 118, 168);">
-                <div class="row">
+                <div class="row" *ngFor="let product of products">
                     <div class="col-sm-2">
-                        <img src="../../../../../../assets/images/galaxyA22.png" class="card-img-top img-fluid" style="max-width: 100%; height: auto;" alt="...">
-
+                        <img src="{{product.product.image}}" class="card-img-top img-fluid mt-2 mb-2" style="max-width: 100%; height: auto;" alt="...">
                     </div>
-                    <div class="col-sm-7">
-                        <p class="mx-3">Samsung Galaxy A22 5G, Blanco, 64 GB, 4 GB RAM</p>
+                    <div class="col-sm-4">
+                        <p class="mx-3">{{product.product.name}}</p>
                     </div>
                     <div class="col-sm-3">
-                        <p class="mx-3">183.20€</p>
+                        <p class="mx-3"><b>Cnt:</b> {{product.amount}}</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="mx-3">{{product.product.price * product.amount}}</p>
                     </div>
                 </div>
-            <hr style="border: 1px solid rgb(14, 118, 168);">
-            <div class="row">
-                <div class="col-sm-2">
-                    <img src="../../../../../../assets/images/galaxyS20.png" class="card-img-top img-fluid" style="max-width: 100%; height: auto;" alt="...">
-                </div>
-                <div class="col-sm-7">
-                    <p class="mx-3">Samsung Galaxy S20 FE 5G, 128GB, 6GB, 6.5"</p>
-                </div>
-                <div class="col-sm-3">
-                    <p class="mx-3">510.50€</p>
-                </div>
-            </div>
-            <hr style="border: 1px solid rgb(14, 118, 168);">
+                <hr style="border: 1px solid rgb(14, 118, 168);">
                 <div class="row">
                     <div class="col-sm-2 offset-sm-2">
                         <p class="mx-3">ENVÍO</p>
@@ -38,14 +29,14 @@
                         <p class="mx-3">GRATIS</p>
                     </div>            
                 </div>
-        </div>
+            </div>
         
         <div class="mt-4 row">
             <div class="col-sm-2 offset-sm-2">
                 <h5 class="mx-3"><b>TOTAL</b></h5>
             </div>
             <div class="col-sm-2 offset-sm-5">
-                <h5 class="mx-3"><b>693,70€</b></h5>
+                <h5 class="mx-3"><b>{{total}}€</b></h5>
             </div>
         </div>
     </div>

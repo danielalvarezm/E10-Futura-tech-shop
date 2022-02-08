@@ -5,14 +5,14 @@
                 aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-decoration-none text-dark" href="#" routerLink="/">Inicio</a></li>
-                    <li class="breadcrumb-item active text-dark fw-bold" aria-current="page">Móviles</li>
+                    <li class="breadcrumb-item active text-dark fw-bold" aria-current="page">Ordenadores</li>
                 </ol>
             </nav>
         </div>
     </div>
     <div class="mt-2 row">
         <div class="col-sm-6">
-            <h4 class="card-title mt-3 mb-3"><u>TOD</u>OS LOS <b>SMARTPHONES</b></h4>
+            <h4 class="card-title mt-3 mb-3"><u>TOD</u>OS LOS <b>PORTÁTILES</b></h4>
         </div>
         <div class="col-sm-2 offset-sm-4">
             <select class="form-select border border-primary rounded-3 shadow-sm border-2"
@@ -264,24 +264,22 @@
                 </div>
             </div>
         </div>
-
         <!-- PRODUCTOS -->
         <div class="col-sm-8">
+
             <div class="row">
-                <div class="btn col-sm-5 m-3 border border-primary rounded-3 shadow-sm border-2 producto" *ngFor="let mobile of mobiles">
-                    <a routerLink="./producto/{{mobile._id}}">
-                        <img src="{{mobile.image}}" class="img-fluid" alt="">
-                        <p><b>{{mobile.name}}</b></p>
-                        <p>{{mobile.description}}</p>
-                        <h3><b>{{mobile.price}} €</b></h3>
-                        <p class="clasificacion" style="font-size: xx-large;">   
-                            <span *ngIf="mobile.mark > 0">★</span>
-                            <span *ngIf="mobile.mark > 1">★</span>
-                            <span *ngIf="mobile.mark > 2">★</span>
-                            <span *ngIf="mobile.mark > 3">★</span>
-                            <span *ngIf="mobile.mark > 4">★</span>
-                        </p> 
-                    </a>
+                <div class="btn col-sm-5 m-3 border border-primary rounded-3 shadow-sm border-2 producto" routerLink="./producto" *ngFor="let laptop of laptops">
+                    <img src="{{laptop.image}}" class="img-fluid" alt="">
+                    <p><b>{{laptop.name}}</b></p>
+                    <p>{{laptop.description}}</p>
+                    <h3><b>{{laptop.price}} €</b></h3>
+                    <p class="clasificacion" style="font-size: xx-large;">   
+                        <span *ngIf="laptop.mark > 0">★</span>
+                        <span *ngIf="laptop.mark > 1">★</span>
+                        <span *ngIf="laptop.mark > 2">★</span>
+                        <span *ngIf="laptop.mark > 3">★</span>
+                        <span *ngIf="laptop.mark > 4">★</span>
+                    </p> 
                 </div>
             </div>
         </div>
