@@ -40,9 +40,4 @@ describe('AccessAccountsComponent', () => {
         expect(compiled.querySelector('nav')).toBeTruthy();
     });
 
-    it('the component should have two modals for change account and password.', () => {
-        expect(document.getElementById('modalChangePassword')).toBeTruthy();
-        expect(document.getElementById('modalChangeAccount')).toBeTruthy();
-    });
-
 })
