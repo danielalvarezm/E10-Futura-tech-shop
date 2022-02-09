@@ -34,19 +34,11 @@ export class SignupComponent {
               res => {
                 localStorage.setItem('token', res.token);
                 this.router.navigate(['/mi-cuenta']);
-              },
-              err => {
-                console.log(err);
-                return false;
               }
             )
-          } else {
-            this.passwordError = true;
-          }
-        } else {
-          this.emailError = true;
-        }
-      }, err => console.log(err));
+          } else { this.passwordError = true; }
+        } else { this.emailError = true; }
+      });
   }
 
   toggleFieldPasswordType() {

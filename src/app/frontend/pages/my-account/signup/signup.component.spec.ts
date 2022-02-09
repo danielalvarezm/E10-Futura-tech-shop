@@ -39,6 +39,16 @@ describe('SignupComponent', () => {
     expect(onsubmit).toHaveBeenCalled();
   });
 
+  it('the attributes values are correct.', () => {
+    expect(component.user).not.toEqual(null);
+    expect(component.fieldPasswordType).toEqual(false);
+    expect(component.fieldConfirmPasswordType).toEqual(false);
+    expect(component.emailError).toEqual(false);
+    expect(component.passwordError).toEqual(false);
+    expect(component.password_confirmation).toEqual(undefined);
+    expect(component.email).toEqual(undefined)
+  });
+
   it('toggleFieldPasswordType() must change the value of the variable fieldTextType.', () => {
     component.toggleFieldPasswordType();
     expect(component.toggleFieldPasswordType).toBeTruthy();

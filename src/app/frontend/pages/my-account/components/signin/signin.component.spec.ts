@@ -53,6 +53,10 @@ describe('SigninComponent', () => {
     expect(component.signIn()).toBeFalsy();
   });
 
+  it('the attributes values are correct.', () => {
+    expect(component.error).toEqual(undefined);
+  });
+
   it('should render title in a h4 tag', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h4').textContent).toContain('INICIO DE SESIÓN');

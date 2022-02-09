@@ -27,11 +27,7 @@ export class SigninComponent {
         localStorage.setItem('email', this.user.email);
         this.router.navigate(['/']);
       },
-       err => {
-        console.log(err);
-        this.error = err;
-        return false;
-       }
+       err => {  this.error = err; }
     )
   }
 
