@@ -1,16 +1,20 @@
 # Sistemas y Tecnologías Webs
 
-<a href="https://github.com/SyTW-2122/E10/actions/workflows/tests.yml">
-  <img src="https://github.com/SyTW-2122/E10/actions/workflows/tests.yml/badge.svg"/>
-</a>
+<p align="center">
+  <a href="https://github.com/SyTW-2122/E10/actions/workflows/tests.yml">
+    <img src="https://github.com/SyTW-2122/E10/actions/workflows/tests.yml/badge.svg"/>
+  </a>
 
-<a href="https://codecov.io/gh/SyTW-2122/E10">
-  <img src="https://codecov.io/gh/SyTW-2122/E10/branch/main/graph/badge.svg?token=52T93G4T4A"/>
-</a>
+  <a href="https://codecov.io/gh/SyTW-2122/E10">
+    <img src="https://codecov.io/gh/SyTW-2122/E10/branch/main/graph/badge.svg?token=52T93G4T4A"/>
+  </a>
+</p>
 
-## Aplicación Futura
+## Aplicación FUTURA
 
-Esta aplicación se trata de una tienda online de productos tecnológicos donde un usuario puede acceder para comprar los productos que desea y valorar los mismos.
+En este proyecto la aplicación web que se ha desarrollado se denomina FUTURA, que se trata de una tienda online donde un usuario puede registrarse y acceder para comprar los productos que desee.
+
+De esta forma FUTURA tiene como objetivo facilitar la compra de productos informáticos y tecnológicos aportando a los usuarios un entorno web que sea fiable y sencillo de utilizar, ofrezca información clara sobre los artículos y disponga de una estética atractiva.
 
 Grupo formado por:
 
