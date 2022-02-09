@@ -6,6 +6,12 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 // const userCtrl = require('../controllers/user.controller');
 
+// Buscar si un usuario ya existe en la base de datos
+router.get('/getUser/:email', async (req, res) => {
+    const user = await User.findOne({"email": req.params.email});
+    res.send(user);
+});
+
 router.get('/',(req, res) => res.send('Hello world'));
 
 router.post('/signup', async (req, res) => {

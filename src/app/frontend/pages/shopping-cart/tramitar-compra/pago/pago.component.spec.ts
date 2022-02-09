@@ -33,5 +33,24 @@ describe("PagoComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  it('there must be a method called codeInfo.', () => {
+    let codeInfo = spyOn(component, 'codeInfo')
+    component.codeInfo();
+    expect(codeInfo).toHaveBeenCalled();
+  });
+
+  it('there must be a method called pay.', () => {
+    let pay = spyOn(component, 'pay')
+    component.pay();
+    expect(pay).toHaveBeenCalled();
+  });
+
+  it('there must be a method called checkStock.', () => {
+    let checkStock = spyOn(component, 'checkStock')
+    component.checkStock();
+    expect(checkStock).toHaveBeenCalled();
+  });
+
+
 });
 

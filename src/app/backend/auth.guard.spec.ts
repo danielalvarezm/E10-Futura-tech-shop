@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MyAccountComponent } from '@app/frontend/pages/my-account/my-account.component';
 
 import { AuthGuard } from './auth.guard';
 
@@ -32,6 +33,9 @@ describe('AuthGuard', () => {
 
   it('canActivate should return true when the session is started', () => {
     localStorage.removeItem('token');
+    let spy1 = spyOn(guard.router, 'navigate').and.callThrough();
     expect(guard.canActivate()).toBeFalsy();
+    expect(spy1).toHaveBeenCalled();
   });
 });
+

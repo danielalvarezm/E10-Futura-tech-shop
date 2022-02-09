@@ -95,8 +95,8 @@
       <!-- showing in all screens -->
       <div class="col-sm-8 offset-sm-1 mt-2 border border-primary rounded-3 shadow-sm border-2">
         <div class="mt-4">
-            <h3 class="card-title"><u>MON</u><b>EDERO</b></h3>
-            <p>Rellena los siguientes campos para añadir una nueva tarjeta en <b>F U T U R A</b>.</p>
+            <h3 class="card-title"><u>MON</u>EDERO</h3>
+            <p>Rellena los siguientes campos para ingresar saldo en tu cuenta de <b>F U T U R A</b>.</p>
             
             <div class="mt-4 row">
                 <div class="col-sm-6 offset-sm-1">
@@ -132,21 +132,25 @@
                     <input class="form-control border border-primary rounded-3 border-1" min="0" type="number" id="" placeholder="Número del código de seguridad">
                 </div>
             </div>
-        </div>
-
-        <div class="mt-2 mb-3 row">
-            <div class="col-sm-5 offset-sm-1">
-                <div class="d-grid gap-2">
-                    <button type="button" class="mt-2 btn btn-outline-primary btn-lg btn-block shadow-sm">ELIMINAR<i class="bi bi-chevron-compact-right"></i></button>
+                <div class="mt-5 row">
+                    <div class="col-sm-4 offset-sm-1">
+                        <h5><b>CANTIDAD A INGRESAR</b></h5>
+                        <input [(ngModel)]="amount" class="form-control border border-primary rounded-3 border-1" min="1" type="number" name="name" placeholder="€" id="cantidad">
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-5">
-                <div class="d-grid gap-2">
-                    <button type="button" class="mt-2 btn btn-primary btn-lg btn-block shadow-sm">GUARDAR TARJETA<i class="bi bi-chevron-compact-right"></i></button>
+                <div class="mt-5 mb-3 row">
+                    <div class="col-sm-5 offset-sm-1">
+                        <div class="d-grid gap-2">
+                            <button type="button" class="mt-2 btn btn-outline-primary btn-lg btn-block shadow-sm" routerLink="../../monedero">CANCELAR<i class="bi bi-chevron-compact-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="d-grid gap-2">
+                            <button type="button" class="mt-2 btn btn-primary btn-lg btn-block shadow-sm" (click)="ingresarSaldo()">INGRESAR<i class="bi bi-chevron-compact-right"></i></button>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
-
       </div>
     </div>
 </div>

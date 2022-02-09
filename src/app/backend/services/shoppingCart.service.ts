@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ShoppingCartService {
 
-  private URL = 'http://10.6.129.122/api';
+  public URL = 'http://10.6.129.122/api';
 
   constructor(private http: HttpClient) {}
 
@@ -35,8 +35,6 @@ export class ShoppingCartService {
   }
 
   deleteProduct(idProduct, email) {
-    console.log(idProduct);
-    console.log(email);
     return this.http.put<any>(this.URL + '/deleteProduct/' + idProduct, {"email": email});
   }
 }

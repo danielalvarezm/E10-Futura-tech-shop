@@ -12,10 +12,10 @@ describe('ProductoComponent', () => {
 
     beforeEach(async () => {
       await TestBed.configureTestingModule({
-        imports: [FormsModule, HttpClientModule, RouterTestingModule],
+        imports: [FormsModule, HttpClientModule, RouterTestingModule], 
         declarations: [ ProductoComponent ]
       })
-      .compileComponents();
+      .compileComponents(); 
     });
 
     beforeEach(() => {
@@ -38,7 +38,7 @@ describe('ProductoComponent', () => {
       let addProduct = spyOn(component, 'addProduct')
       component.addProduct();
       expect(addProduct).toHaveBeenCalled();
-    });
+    }); 
 
     it('there must be a method called ngOnInit.', () => {
       let ngOnInit = spyOn(component, 'ngOnInit')
@@ -54,7 +54,7 @@ describe('ProductoComponent', () => {
     it('should render title in a h3 tag to show the technical characteristics', () => {
       const compiled = fixture.debugElement.nativeElement;
       expect(compiled.querySelector('h3').textContent).toContain('CARACTERÍSTICAS TÉCNICAS');
-    });
+    }); 
 
     it('there is a field for quantity', () => {
       const compiled = fixture.debugElement.nativeElement;

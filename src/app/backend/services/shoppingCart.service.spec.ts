@@ -57,11 +57,23 @@ describe('ShoppingCartService', () => {
     expect(updateUser).toHaveBeenCalled();
   });
 
+  it('there must be a method called doPurchase', () => {
+    let doPurchase = spyOn(service, 'doPurchase');
+    service.doPurchase('emailtest@gmail.com', 1);
+    expect(doPurchase).toHaveBeenCalled();
+  });
+
 
   it('there must be a method called clearCart', () => {
     let clearCart = spyOn(service, 'clearCart');
     service.clearCart('emailtest@gmail.com');
     expect(clearCart).toHaveBeenCalled();
+  });
+
+  it('there must be a method called deleteProduct', () => {
+    let deleteProduct = spyOn(service, 'deleteProduct');
+    service.deleteProduct('1', 'emailtest@gmail.com');
+    expect(deleteProduct).toHaveBeenCalled();
   });
 
 
@@ -156,6 +168,29 @@ describe('ShoppingCartService', () => {
     request.flush(userTest);
   });
 
+  it('doPurchase  updates the user portfolio and the stock of the products', () => {
+    const userTest: User = {
+      id: '1',
+      email: 'emailtest@gmail.com',
+      password: 'passwordtest',
+      firstName: 'firstNametest',
+      lastName1: 'lastName1test',
+      lastName2: 'lastName2test',
+      admin: false,
+      wallet: 100,
+    };
+
+    const body = {"wallet": 100, "products": "testProduct"};
+
+    service.doPurchase(userTest.email, body).subscribe(result => {
+      expect(result).toEqual(userTest); 
+    });
+
+    const request = httpMock.expectOne(`${service.URL}/doPurchase/` + userTest.email);
+    expect(request.request.method).toBe('PUT');
+    request.flush(userTest);
+  }); 
+
 
   it('clearCart clears the user shopping cart', () => {
     const userTest: User = {
@@ -174,6 +209,27 @@ describe('ShoppingCartService', () => {
     });
 
     const request = httpMock.expectOne(`${service.URL}/clearCart/` + userTest.email);
+    expect(request.request.method).toBe('PUT');
+    request.flush(userTest);
+  });
+
+  it('deleteProduct removes a product from the cart', () => {
+    const userTest: User = {
+      id: '1',
+      email: 'emailtest@gmail.com',
+      password: 'passwordtest',
+      firstName: 'firstNametest',
+      lastName1: 'lastName1test',
+      lastName2: 'lastName2test',
+      admin: false,
+      wallet: 100,
+    };
+
+    service.deleteProduct('1', userTest.email).subscribe(result => {
+      expect(result).toEqual(userTest); 
+    });
+
+    const request = httpMock.expectOne(`${service.URL}/deleteProduct/1`);
     expect(request.request.method).toBe('PUT');
     request.flush(userTest);
   }); 

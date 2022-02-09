@@ -104,72 +104,17 @@
     <div class="col-sm-8 offset-sm-1 mt-2 border border-primary rounded-3 shadow-sm border-2">
       <div class="mt-4 p-2">
         <h3 class="card-title"><u>MON</u>EDERO</h3>
-        <p>Estos son las tarjetas que has añadido en <b>F U T U R A</b>.</p>
-        <div class="col-sm-5 offset-sm-7">
-          <button type="button" class="btn btn-primary btn-lg btn-block shadow-sm" routerLink="./nueva-tarjeta">AÑADIR
-            NUEVA TARJETA<i class="bi bi-chevron-compact-right"></i></button>
-        </div>
-
-        <div class="mt-3 offset-sm-1 col-sm-10 border border-info rounded-3 shadow-sm border-2">
-          <h5 class="p-2"><b>TARJETA 1</b></h5>
-          <div class="p-2">
-            <div class="row">
-              <div class="col-sm-5 offset-sm-1">
-                <p>Fecha en la que fue añadida:</p>
-              </div>
-              <div class="col-sm-5">
-                <p><b>jueves 4 noviembre 2021</b></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5 offset-sm-1">
-                <p>Número de tarjeta:</p>
-              </div>
-              <div class="col-sm-5">
-                <p><b>4548032003933011</b></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5 offset-sm-1">
-                <p>Caducidad:</p>
-              </div>
-              <div class="col-sm-5">
-                <p><b>03/2022</b></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5 offset-sm-1">
-                <p>Código de seguridad:</p>
-              </div>
-              <div class="col-sm-5">
-                <p><b>123</b></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5 offset-sm-1">
-                <p>Número de operaciones realizadas:</p>
-              </div>
-              <div class="col-sm-5">
-                <p><b>2</b></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5 offset-sm-1">
-                <p>Importe total gastado:</p>
-              </div>
-              <div class="col-sm-5">
-                <p><b>556,12 €</b></p>
-              </div>
-            </div>
-
-            <div class="mt-2 mb-2 col-sm-6 offset-sm-3">
-              <div class="d-grid gap-2">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block shadow-sm">ELIMINAR<i
-                    class="bi bi-chevron-compact-right"></i></button>
-              </div>
-            </div>
+        <p>Hola {{userName}}, este es el saldo que tienes en <b>F U T U R A</b>.</p>
+        <div class="mt-5 col-sm-8 offset-sm-2 border border-primary border-rounded border-1 rounded-3">
+          <div class="mt-5 col-sm-12 text-center">
+            <h1 class="p-3"><b>Saldo actual: </b> {{saldoUsuario}} €</h1>
           </div>
-        </div>
+          <div class="mt-2 mb-5 col-sm-8 offset-sm-2">
+            <div class="d-grid gap-2">
+              <button type="button" class="mb-2 btn btn-primary btn-lg btn-block shadow-sm" routerLink="./add-saldo">AÑADIR
+                SALDO<i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+          </div> 
       </div>
     </div>
   </div>

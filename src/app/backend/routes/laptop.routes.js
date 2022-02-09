@@ -3,8 +3,6 @@ const router = express.Router();
 
 const Laptop = require('../models/laptop');
 
-// router.get('/',(req, res) => res.send('Hello world'));
-
 router.post('/addLaptops', async (req, res) => {
     console.log(req.body);
     const laptop = new Laptop({

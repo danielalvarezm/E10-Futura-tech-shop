@@ -27,16 +27,27 @@ describe('MyWalletComponent', () => {
         expect(component).toBeTruthy();
       });
 
+      it('there must be a method called ngOnInit.', () => {
+        let ngOnInit = spyOn(component, 'ngOnInit')
+        component.ngOnInit();
+        expect(ngOnInit).toHaveBeenCalled();
+      });
+
+      it('the attributes values are correct.', () => {
+        expect(component.saldoUsuario).not.toBe(null);
+        expect(component.userName).not.toBe(null);
+      });
+
       it('the component should have a navbar.', () => {
         fixture = TestBed.createComponent(MyWalletComponent);
         const compiled = fixture.debugElement.nativeElement;
         expect(compiled.querySelector('nav')).toBeTruthy();
       });
 
-        it('the component should have a button to add a new card.', () => {
+      it('the component should have a button to add a new card.', () => {
         const fixture = TestBed.createComponent(MyWalletComponent);
         fixture.detectChanges();
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('button').textContent).toContain('AÑADIR NUEVA TARJET');
-        });
+        expect(compiled.querySelector('button').textContent).toContain('AÑADIR SALDO');
+      });
 })

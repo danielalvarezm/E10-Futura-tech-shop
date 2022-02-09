@@ -30,6 +30,11 @@ describe("ResumenCompraComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  it('the attributes values are correct.', () => {
+    expect(component.total).toEqual(0);
+    expect(component.products).toEqual(null);
+  });
+
   it('should render title in a h4 tag to show the technical characteristics', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h4').textContent).toContain('RESUMEN DE COMPRA');

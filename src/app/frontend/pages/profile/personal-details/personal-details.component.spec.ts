@@ -30,6 +30,12 @@ describe("PersonalDetailsComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  it('there must be a method called ngOnInit.', () => {
+    let ngOnInit = spyOn(component, 'ngOnInit')
+    component.ngOnInit();
+    expect(ngOnInit).toHaveBeenCalled();
+  });
+
   it("the component should have a form.", () => {
     expect(component.accountForm).toBeUndefined();
   });

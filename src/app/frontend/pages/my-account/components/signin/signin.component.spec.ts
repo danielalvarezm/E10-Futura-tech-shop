@@ -9,10 +9,6 @@ import { SigninComponent } from './signin.component';
 describe('SigninComponent', () => {
   let component: SigninComponent;
   let fixture: ComponentFixture<SigninComponent>;
-
-  RouterTestingModule.withRoutes([
-    { path: '/', component: MainPageComponent}
-  ])
   
   beforeEach(async () => {
     await TestBed.configureTestingModule({

@@ -11,7 +11,8 @@ import { MyWalletComponent } from './my-wallet/my-wallet.component';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { MyAddressComponent } from './address/my-address.component';
-import { AddCardComponent } from './my-wallet/add-card/add-card.component';
+import { AddSaldoComponent } from './my-wallet/add-saldo/add-saldo.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,13 +23,14 @@ import { AddCardComponent } from './my-wallet/add-card/add-card.component';
     AddAddressComponent,
     MyOrdersComponent,
     MyWalletComponent,
-    AddCardComponent,
+    AddSaldoComponent,
     FavoritesComponent,
     PersonalDetailsComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     ProfileRoutingModule
   ]
 })

@@ -33,9 +33,9 @@ describe('LaptopsComponent', () => {
         expect(ngOnInit).toHaveBeenCalled();
       });
 
-      /*it('the attributes values are correct.', () => {
-        expect(component.laptops.length).not.toEqual(0);
-      });*/
+      it('the attributes values are correct.', () => {
+        expect(component.laptops.length).toEqual(0);
+      });
 
       it('should render title in a h4 tag to show all smartphones', () => {
         const compiled = fixture.debugElement.nativeElement;

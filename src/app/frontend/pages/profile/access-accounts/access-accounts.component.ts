@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { ShoppingCartService } from "@app/backend/services/shoppingCart.service";
 
 
 @Component({
@@ -7,8 +8,13 @@ import { Component } from "@angular/core";
     styleUrls: ['./access-accounts.component.css']
   })
 
-  export class AccessAccountsComponent {
-      
-    constructor() {}
-      
+  export class AccessAccountsComponent implements OnInit {
+
+    userEmail: any;
+    constructor(private shoppingCartService: ShoppingCartService) { }
+    
+    ngOnInit(): void {
+      this.userEmail = localStorage.getItem('email');
+    }
+  
   }

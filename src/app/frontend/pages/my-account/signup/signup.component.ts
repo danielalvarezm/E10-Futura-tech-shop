@@ -13,24 +13,41 @@ export class SignupComponent {
   user = new User("", "", "", "", "", "", false, 0);
   fieldPasswordType: boolean = false;
   fieldConfirmPasswordType: boolean = false;
+  emailError = false;
+  passwordError = false;
+  password_confirmation: any;
+  email;
 
   constructor(public authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
   signUp() {
-    this.authService.signUpUser(this.user)
-      .subscribe(
-        res => {
-          localStorage.setItem('token', res.token);
-          this.router.navigate(['/mi-cuenta']);
-        },
-        err => {
-          console.log(err);
-          return false;
-         }
-      )
-  } 
+    this.emailError = false;
+    this.passwordError = false
+    this.authService.getUser(this.user.email)
+      .subscribe(res => {
+        if (res == null) {
+          if(this.password_confirmation == this.user.password){
+            this.authService.signUpUser(this.user)
+            .subscribe(
+              res => {
+                localStorage.setItem('token', res.token);
+                this.router.navigate(['/mi-cuenta']);
+              },
+              err => {
+                console.log(err);
+                return false;
+              }
+            )
+          } else {
+            this.passwordError = true;
+          }
+        } else {
+          this.emailError = true;
+        }
+      }, err => console.log(err));
+  }
 
   toggleFieldPasswordType() {
     this.fieldPasswordType = !this.fieldPasswordType;
