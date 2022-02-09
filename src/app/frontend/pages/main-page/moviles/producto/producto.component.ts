@@ -40,7 +40,6 @@ import { MobileService } from '../../../../../backend/services/mobile.service';
       if (this.amount <= 0) {
         window.alert("No se pueden escoger cantidades menores o iguales a 0");
         window.location.reload();
-
       } else if (this.checkStock()) {
         this.mobilesService.addProduct(this.mobiles, info)
         .subscribe(

@@ -19,7 +19,7 @@ export class ConfirmacionComponent implements OnInit{
   constructor(private shoppingCartService: ShoppingCartService, private router: Router ) { }
 
   ngOnInit() {
-    for (let i = 0; i < this.products.length; i++) {
+    for (let i = 0; i < Object.keys(this.products).length; i++) {
       this.size += Number(this.products[i].amount);
     }
   }

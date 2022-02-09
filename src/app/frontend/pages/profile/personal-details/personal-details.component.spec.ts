@@ -40,6 +40,13 @@ describe("PersonalDetailsComponent", () => {
     expect(component.accountForm).toBeUndefined();
   });
 
+  it('the attributes values are correct.', () => {
+    expect(component.accountForm).toEqual(undefined);
+    expect(component.firstName).toEqual(undefined);
+    expect(component.lastName1).toEqual(undefined);
+    expect(component.lastName2).toEqual(undefined);
+  });
+
   it("the component should have a navbar.", () => {
     fixture = TestBed.createComponent(PersonalDetailsComponent);
     const compiled = fixture.debugElement.nativeElement;

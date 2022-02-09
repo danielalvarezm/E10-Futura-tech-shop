@@ -33,6 +33,10 @@ describe('MyAddressComponent', () => {
         expect(ngOnInit).toHaveBeenCalled();
       });  
 
+      it('the attributes values are correct.', () => {
+        expect(component.userName).toEqual(undefined);
+      });
+
       it('the component should have a navbar.', () => {
         fixture = TestBed.createComponent(MyAddressComponent);
         const compiled = fixture.debugElement.nativeElement;
