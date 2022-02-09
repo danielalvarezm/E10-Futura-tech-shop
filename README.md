@@ -1,7 +1,5 @@
 # Sistemas y Tecnologías Webs
 
-## Aplicación Futura
-
 <a href="https://github.com/SyTW-2122/E10/actions/workflows/tests.yml">
   <img src="https://github.com/SyTW-2122/E10/actions/workflows/tests.yml/badge.svg"/>
 </a>
@@ -9,6 +7,8 @@
 <a href="https://codecov.io/gh/SyTW-2122/E10">
   <img src="https://codecov.io/gh/SyTW-2122/E10/branch/main/graph/badge.svg?token=52T93G4T4A"/>
 </a>
+
+## Aplicación Futura
 
 Esta aplicación se trata de una tienda online de productos tecnológicos donde un usuario puede acceder para comprar los productos que desea y valorar los mismos.
 
