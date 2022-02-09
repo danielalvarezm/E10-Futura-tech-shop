@@ -12,9 +12,9 @@
 
 ## Aplicación FUTURA
 
-En este proyecto la aplicación web que se ha desarrollado se denomina FUTURA, que se trata de una tienda online donde un usuario puede registrarse y acceder para comprar los productos que desee.
+En este proyecto la aplicación web que se ha desarrollado se denomina **FUTURA**, que se trata de una tienda online donde un usuario puede registrarse y acceder para comprar los productos que desee.
 
-De esta forma FUTURA tiene como objetivo facilitar la compra de productos informáticos y tecnológicos aportando a los usuarios un entorno web que sea fiable y sencillo de utilizar, ofrezca información clara sobre los artículos y disponga de una estética atractiva.
+De esta forma **FUTURA** tiene como objetivo facilitar la compra de productos informáticos y tecnológicos aportando a los usuarios un entorno web que sea fiable y sencillo de utilizar, ofrezca información clara sobre los artículos y disponga de una estética atractiva.
 
 Grupo formado por:
 
