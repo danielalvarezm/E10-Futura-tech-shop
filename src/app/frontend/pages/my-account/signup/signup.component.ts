@@ -29,13 +29,11 @@ export class SignupComponent {
       .subscribe(res => {
         if (res == null) {
           if(this.password_confirmation == this.user.password){
-            this.authService.signUpUser(this.user)
-            .subscribe(
+            this.authService.signUpUser(this.user).subscribe(
               res => {
                 localStorage.setItem('token', res.token);
                 this.router.navigate(['/mi-cuenta']);
-              }
-            )
+              })
           } else { this.passwordError = true; }
         } else { this.emailError = true; }
       });

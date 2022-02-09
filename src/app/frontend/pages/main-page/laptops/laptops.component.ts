@@ -14,12 +14,9 @@ import { LaptopService } from '../../../../backend/services/laptop.service';
     constructor(private laptopsService: LaptopService) {}
 
     ngOnInit(): void {
-      this.laptopsService.getLaptops()
-      .subscribe(
+      this.laptopsService.getLaptops().subscribe(
         res => {
           this.laptops = res;
-        },
-        err => console.log(err)
-      );
+        }, err => console.log(err));
     }  
   }

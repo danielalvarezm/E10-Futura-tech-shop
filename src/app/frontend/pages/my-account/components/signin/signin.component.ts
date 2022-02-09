@@ -20,15 +20,12 @@ export class SigninComponent {
 
 
   signIn() {
-    this.authService.signInUser(this.user)
-    .subscribe(
+    this.authService.signInUser(this.user).subscribe(
       res => { 
         localStorage.setItem('token', res.token);
         localStorage.setItem('email', this.user.email);
         this.router.navigate(['/']);
-      },
-       err => {  this.error = err; }
-    )
+      }, err => {  this.error = err; })
   }
 
   toggleFieldTextType() {

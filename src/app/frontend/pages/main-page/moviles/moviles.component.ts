@@ -14,14 +14,9 @@ import { MobileService } from '../../../../backend/services/mobile.service';
     constructor(private mobilesService: MobileService) {}
 
     ngOnInit(): void {
-      this.mobilesService.getMobiles()
-      .subscribe(
+      this.mobilesService.getMobiles().subscribe(
         res => {
-          console.log(res)
           this.mobiles = res;
-          
-        },
-        err => console.log(err)
-      );
+        }, err => console.log(err));
     }  
   }

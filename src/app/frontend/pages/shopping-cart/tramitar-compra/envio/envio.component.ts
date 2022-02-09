@@ -19,10 +19,7 @@ export class EnvioComponent implements OnInit{
     .subscribe(
       res => {
        this.user = res
-      },
-       err => {
-        console.log(err);
-       }
+      }
     )
   }
 }
