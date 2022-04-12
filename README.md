@@ -28,3 +28,89 @@ Grupo formado por:
 - En primer lugar, se realiza la descarga o clonación del repositorio de la aplicación.
 - Luego, se instalan las dependencias con `npm install`.
 - Finalmente, se ejecuta el comando `ng serve` para poner en funcionamiento la aplicación.
+
+## Muestra
+
+### Página principal
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/1-PaginaPrincipal.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/1-PaginaPrincipal.gif"/>
+  </a>
+</p>
+
+### Registrarse
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/2-Registrarse.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/2-Registrarse.gif"/>
+  </a>
+</p>
+
+### Validaciones al registrarse
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/3-ErrorAlRegistrarse.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/3-ErrorAlRegistrarse.gif"/>
+  </a>
+</p>
+
+### Iniciar sesión
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/4-IniciarSesion.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/4-IniciarSesion.gif"/>
+  </a>
+</p>
+
+### Controlar el acceso a rutas
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/5-AccesoARutas.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/5-AccesoARutas.gif"/>
+  </a>
+</p>
+
+### Añadir producto - 1
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/6-AñadirProducto1.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/6-AñadirProducto1.gif"/>
+  </a>
+</p>
+
+### Añadir producto - 2
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/7-AñadirProducto2.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/7-AñadirProducto2.gif"/>
+  </a>
+</p>
+
+### Añadir saldo
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/8-AñadirSaldo.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/8-AñadirSaldo.gif"/>
+  </a>
+</p>
+
+### Eliminar del carrito
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/9-Carrito1.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/9-Carrito1.gif"/>
+  </a>
+</p>
+
+### Carrito
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/10-Carrito2.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/10-Carrito2.gif"/>
+  </a>
+</p>
+
+### Saldo insuficiente
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/11-Carrito3.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/11-Carrito3.gif"/>
+  </a>
+</p>
+
+### Otras secciones
+<p align="center">
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/12-OtrasSecciones.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/12-OtrasSecciones.gif"/>
+  </a>
+</p>
