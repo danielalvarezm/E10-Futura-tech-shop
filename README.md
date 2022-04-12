@@ -82,8 +82,8 @@ Grupo formado por:
 
 ### Añadir saldo
 <p align="center">
-  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/8-AñadirSaldo.gif">
-    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/8-AñadirSaldo.gif"/>
+  <a href="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/8-AñadirSaldoALaCuenta.gif">
+    <img src="https://github.com/danielalvarezm/E10-Futura-tech-shop/blob/main/images/8-AñadirSaldoALaCuenta.gif"/>
   </a>
 </p>
 
