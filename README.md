@@ -16,6 +16,9 @@ En este proyecto la aplicación web que se ha desarrollado se denomina **FUTURA*
 
 De esta forma **FUTURA** tiene como objetivo facilitar la compra de productos informáticos y tecnológicos aportando a los usuarios un entorno web que sea fiable y sencillo de utilizar, ofrezca información clara sobre los artículos y disponga de una estética atractiva.
 
+Acceda al [informe](/docs/Informe%20final%20-%20E10.pdf)
+Acceda a la [presentación](https://docs.google.com/presentation/d/1a8iKmMHi1qi_hcnPIaXCYufRui0F7AiMCKYixmDaSxA/edit?usp=sharing)
+
 Grupo formado por:
 
  * **Daniel Álvarez Medina - [alu0101216126@ull.edu.es](alu0101216126@ull.edu.es)**
